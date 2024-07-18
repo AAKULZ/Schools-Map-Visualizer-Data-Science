@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d04594982884c7e4eb4e263f63ab17fe {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d04594982884c7e4eb4e263f63ab17fe" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d04594982884c7e4eb4e263f63ab17fe = L.map(
+                "map_d04594982884c7e4eb4e263f63ab17fe",
+                {
+                    center: [10.8505, 76.2711],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1b2c557ce0d9ef9fc738c8cc6f74cb5c = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_d04594982884c7e4eb4e263f63ab17fe);
+        
+    
+            var circle_marker_aec333e60744d1c41a09a2eb523bc63f = L.circleMarker(
+                [8.5241, 76.9366],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.65, "stroke": true, "weight": 3}
+            ).addTo(map_d04594982884c7e4eb4e263f63ab17fe);
+        
+    
+        var popup_58173b078b07d6fb720df2bc566670ac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9dc0a6f874263e708e53699acc64350e = $(`<div id="html_9dc0a6f874263e708e53699acc64350e" style="width: 100.0%; height: 100.0%;">ALAPPUZHA<br>Management: Department of Education</div>`)[0];
+                popup_58173b078b07d6fb720df2bc566670ac.setContent(html_9dc0a6f874263e708e53699acc64350e);
+            
+        
+
+        circle_marker_aec333e60744d1c41a09a2eb523bc63f.bindPopup(popup_58173b078b07d6fb720df2bc566670ac)
+        ;
+
+        
+    
+    
+            var circle_marker_7a619dcd8d8413a55a39d765d3b22899 = L.circleMarker(
+                [8.5241, 76.9366],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.05, "stroke": true, "weight": 3}
+            ).addTo(map_d04594982884c7e4eb4e263f63ab17fe);
+        
+    
+        var popup_81a3108e7844573c4dc9bfd989573af9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b0c16f980fed7a861bc81ed1259c05e = $(`<div id="html_3b0c16f980fed7a861bc81ed1259c05e" style="width: 100.0%; height: 100.0%;">ALAPPUZHA<br>Management: Tribal Welfare Department</div>`)[0];
+                popup_81a3108e7844573c4dc9bfd989573af9.setContent(html_3b0c16f980fed7a861bc81ed1259c05e);
+            
+        
+
+        circle_marker_7a619dcd8d8413a55a39d765d3b22899.bindPopup(popup_81a3108e7844573c4dc9bfd989573af9)
+        ;
+
+        
+    
+    
+            var circle_marker_f46c07236b8351cfb8c82c9b68e997b8 = L.circleMarker(
+                [8.5241, 76.9366],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.35, "stroke": true, "weight": 3}
+            ).addTo(map_d04594982884c7e4eb4e263f63ab17fe);
+        
+    
+        var popup_9933222158eb9adb5e8d1849dc95668b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cc7389ac119a7570405f3e9bbe236406 = $(`<div id="html_cc7389ac119a7570405f3e9bbe236406" style="width: 100.0%; height: 100.0%;">ALAPPUZHA<br>Management: Local body</div>`)[0];
+                popup_9933222158eb9adb5e8d1849dc95668b.setContent(html_cc7389ac119a7570405f3e9bbe236406);
+            
+        
+
+        circle_marker_f46c07236b8351cfb8c82c9b68e997b8.bindPopup(popup_9933222158eb9adb5e8d1849dc95668b)
+        ;
+
+        
+    
+    
+            var circle_marker_ad543dd35351c9e07216439b9d120ae2 = L.circleMarker(
+                [8.5241, 76.9366],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.5, "stroke": true, "weight": 3}
+            ).addTo(map_d04594982884c7e4eb4e263f63ab17fe);
+        
+    
+        var popup_27a70f5bb31b2dd4db7ec6943cc4cdc6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b7347b8a96a9b7b3c8c4b794e0a621f = $(`<div id="html_1b7347b8a96a9b7b3c8c4b794e0a621f" style="width: 100.0%; height: 100.0%;">ALAPPUZHA<br>Management: Government Aided</div>`)[0];
+                popup_27a70f5bb31b2dd4db7ec6943cc4cdc6.setContent(html_1b7347b8a96a9b7b3c8c4b794e0a621f);
+            
+        
+
+        circle_marker_ad543dd35351c9e07216439b9d120ae2.bindPopup(popup_27a70f5bb31b2dd4db7ec6943cc4cdc6)
+        ;
+
+        
+    
+    
+            var circle_marker_6dbcef994a5fc7bee28db6da09519846 = L.circleMarker(
+                [8.5241, 76.9366],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.3, "stroke": true, "weight": 3}
+            ).addTo(map_d04594982884c7e4eb4e263f63ab17fe);
+        
+    
+        var popup_d952d40e681b438ac7f600e06906454a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5028c212eb253a259d1a5a9a80c363be = $(`<div id="html_5028c212eb253a259d1a5a9a80c363be" style="width: 100.0%; height: 100.0%;">ALAPPUZHA<br>Management: Private Unaided (Recognized)</div>`)[0];
+                popup_d952d40e681b438ac7f600e06906454a.setContent(html_5028c212eb253a259d1a5a9a80c363be);
+            
+        
+
+        circle_marker_6dbcef994a5fc7bee28db6da09519846.bindPopup(popup_d952d40e681b438ac7f600e06906454a)
+        ;
+
+        
+    
+</script>
+</html>

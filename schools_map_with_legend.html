@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_32fee6fe36b6cb2881eca03fa3a373f4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 200px; height: 150px; 
+     background-color: white; border:2px solid grey; z-index:9999; font-size:14px;">
+     &nbsp; <b>Legend</b> <br>
+     &nbsp; <i class="fa fa-circle fa-1x" style="color:green"></i> Department of Education <br>
+     &nbsp; <i class="fa fa-circle fa-1x" style="color:blue"></i> Tribal Welfare Department <br>
+     &nbsp; <i class="fa fa-circle fa-1x" style="color:red"></i> Local body <br>
+     &nbsp; <i class="fa fa-circle fa-1x" style="color:purple"></i> Government Aided <br>
+     &nbsp; <i class="fa fa-circle fa-1x" style="color:orange"></i> Private Unaided (Recognized) <br>
+      </div>
+     
+    
+            <div class="folium-map" id="map_32fee6fe36b6cb2881eca03fa3a373f4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_32fee6fe36b6cb2881eca03fa3a373f4 = L.map(
+                "map_32fee6fe36b6cb2881eca03fa3a373f4",
+                {
+                    center: [10.8505, 76.2711],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f298d97f7198046ae5c6c25f3323313a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_32fee6fe36b6cb2881eca03fa3a373f4);
+        
+    
+            var marker_cluster_d6c369b9d793a2a07ea98cdb55187101 = L.markerClusterGroup(
+                {}
+            );
+            map_32fee6fe36b6cb2881eca03fa3a373f4.addLayer(marker_cluster_d6c369b9d793a2a07ea98cdb55187101);
+        
+    
+            var circle_marker_d1bf7640d0cc67687556da2d4cb82155 = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_d6c369b9d793a2a07ea98cdb55187101);
+        
+    
+        var popup_cfa90c4e9ebc6ed94fad4ec4ce4dedac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1bcfb8402385bf2ffec87318c7514b75 = $(`<div id="html_1bcfb8402385bf2ffec87318c7514b75" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Department of Education<br>Total: 333</div>`)[0];
+                popup_cfa90c4e9ebc6ed94fad4ec4ce4dedac.setContent(html_1bcfb8402385bf2ffec87318c7514b75);
+            
+        
+
+        circle_marker_d1bf7640d0cc67687556da2d4cb82155.bindPopup(popup_cfa90c4e9ebc6ed94fad4ec4ce4dedac)
+        ;
+
+        
+    
+    
+            var circle_marker_9733974fbdfad142ad2299c8e0e67399 = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_d6c369b9d793a2a07ea98cdb55187101);
+        
+    
+        var popup_85c937644e93316acd291dc04ab139cf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_93ef142b64e2474451528e46b4e8ad7d = $(`<div id="html_93ef142b64e2474451528e46b4e8ad7d" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Tribal Welfare Department<br>Total: 1</div>`)[0];
+                popup_85c937644e93316acd291dc04ab139cf.setContent(html_93ef142b64e2474451528e46b4e8ad7d);
+            
+        
+
+        circle_marker_9733974fbdfad142ad2299c8e0e67399.bindPopup(popup_85c937644e93316acd291dc04ab139cf)
+        ;
+
+        
+    
+    
+            var circle_marker_da01875ea3f033621c343fdb9ee0e67c = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_d6c369b9d793a2a07ea98cdb55187101);
+        
+    
+        var popup_c27e37bb10d2ee799165b36e5ded7866 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ea03b2538654f691c7c389fd08bd597e = $(`<div id="html_ea03b2538654f691c7c389fd08bd597e" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Local body<br>Total: 7</div>`)[0];
+                popup_c27e37bb10d2ee799165b36e5ded7866.setContent(html_ea03b2538654f691c7c389fd08bd597e);
+            
+        
+
+        circle_marker_da01875ea3f033621c343fdb9ee0e67c.bindPopup(popup_c27e37bb10d2ee799165b36e5ded7866)
+        ;
+
+        
+    
+    
+            var circle_marker_517b25446e130afd3c7ddbb617804e5a = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_d6c369b9d793a2a07ea98cdb55187101);
+        
+    
+        var popup_0d9267a727c58dc530d14e66a5ee9783 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a05ffc6ed88d67f12816cd30fd90c572 = $(`<div id="html_a05ffc6ed88d67f12816cd30fd90c572" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Government Aided<br>Total: 390</div>`)[0];
+                popup_0d9267a727c58dc530d14e66a5ee9783.setContent(html_a05ffc6ed88d67f12816cd30fd90c572);
+            
+        
+
+        circle_marker_517b25446e130afd3c7ddbb617804e5a.bindPopup(popup_0d9267a727c58dc530d14e66a5ee9783)
+        ;
+
+        
+    
+    
+            var circle_marker_5d1edec9cf77bab58350044f21096268 = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_d6c369b9d793a2a07ea98cdb55187101);
+        
+    
+        var popup_b13350d21d805f5593f51651a537d088 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3d06fbb19c761bb84c098182f1b61dc2 = $(`<div id="html_3d06fbb19c761bb84c098182f1b61dc2" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Private Unaided (Recognized)<br>Total: 186</div>`)[0];
+                popup_b13350d21d805f5593f51651a537d088.setContent(html_3d06fbb19c761bb84c098182f1b61dc2);
+            
+        
+
+        circle_marker_5d1edec9cf77bab58350044f21096268.bindPopup(popup_b13350d21d805f5593f51651a537d088)
+        ;
+
+        
+    
+</script>
+</html>

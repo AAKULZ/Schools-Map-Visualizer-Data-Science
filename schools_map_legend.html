@@ -1,0 +1,2925 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_274c65c38763bb2f83df6551a8b073e9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 200px; height: 150px; 
+     background-color: white; border:2px solid grey; z-index:9999; font-size:14px;">
+     &nbsp; <b>Legend</b> <br>
+     &nbsp; <i class="fa fa-circle fa-1x" style="color:green"></i> Department of Education <br>
+     &nbsp; <i class="fa fa-circle fa-1x" style="color:blue"></i> Tribal Welfare Department <br>
+     &nbsp; <i class="fa fa-circle fa-1x" style="color:red"></i> Local body <br>
+     &nbsp; <i class="fa fa-circle fa-1x" style="color:purple"></i> Government Aided <br>
+     &nbsp; <i class="fa fa-circle fa-1x" style="color:orange"></i> Private Unaided (Recognized) <br>
+      </div>
+     
+    
+            <div class="folium-map" id="map_274c65c38763bb2f83df6551a8b073e9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_274c65c38763bb2f83df6551a8b073e9 = L.map(
+                "map_274c65c38763bb2f83df6551a8b073e9",
+                {
+                    center: [10.8505, 76.2711],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f4d61d29d80d5ce373c256ec6244a67e = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_274c65c38763bb2f83df6551a8b073e9);
+        
+    
+            var marker_cluster_f043b0f56dec3cada97fa738c3fc76c8 = L.markerClusterGroup(
+                {}
+            );
+            map_274c65c38763bb2f83df6551a8b073e9.addLayer(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+            var circle_marker_0174afea194a42de62300e23db72738b = L.circleMarker(
+                [10.7867, 76.6548],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 66.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_3b9becadb343edc5a3ae09aa756fef1b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7327494e92091081ebfd06744c3401fa = $(`<div id="html_7327494e92091081ebfd06744c3401fa" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Department of Education<br>Total: 333</div>`)[0];
+                popup_3b9becadb343edc5a3ae09aa756fef1b.setContent(html_7327494e92091081ebfd06744c3401fa);
+            
+        
+
+        circle_marker_0174afea194a42de62300e23db72738b.bindPopup(popup_3b9becadb343edc5a3ae09aa756fef1b)
+        ;
+
+        
+    
+    
+            var circle_marker_f13dfc0242c93838cedf1bf5560394bf = L.circleMarker(
+                [10.7867, 76.6548],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_786cb14249ab73867dd683bde1943c5e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1f9edd3cf48ea9eb3ada7bcc240214aa = $(`<div id="html_1f9edd3cf48ea9eb3ada7bcc240214aa" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Tribal Welfare Department<br>Total: 1</div>`)[0];
+                popup_786cb14249ab73867dd683bde1943c5e.setContent(html_1f9edd3cf48ea9eb3ada7bcc240214aa);
+            
+        
+
+        circle_marker_f13dfc0242c93838cedf1bf5560394bf.bindPopup(popup_786cb14249ab73867dd683bde1943c5e)
+        ;
+
+        
+    
+    
+            var circle_marker_3fa79582d2db84a0843e1d69706225d2 = L.circleMarker(
+                [10.7867, 76.6548],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_eef5b7991daeb16b6f996e1ea58b5c8f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_34d25153b00fe5c73847368a96b94358 = $(`<div id="html_34d25153b00fe5c73847368a96b94358" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Local body<br>Total: 7</div>`)[0];
+                popup_eef5b7991daeb16b6f996e1ea58b5c8f.setContent(html_34d25153b00fe5c73847368a96b94358);
+            
+        
+
+        circle_marker_3fa79582d2db84a0843e1d69706225d2.bindPopup(popup_eef5b7991daeb16b6f996e1ea58b5c8f)
+        ;
+
+        
+    
+    
+            var circle_marker_1e46e44895dcd461dc5f91cc26060d11 = L.circleMarker(
+                [10.7867, 76.6548],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 78.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_eb1a47caf88fbedbcee6815358c9bd48 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a526c313552d54f139485021b8838cae = $(`<div id="html_a526c313552d54f139485021b8838cae" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Government Aided<br>Total: 390</div>`)[0];
+                popup_eb1a47caf88fbedbcee6815358c9bd48.setContent(html_a526c313552d54f139485021b8838cae);
+            
+        
+
+        circle_marker_1e46e44895dcd461dc5f91cc26060d11.bindPopup(popup_eb1a47caf88fbedbcee6815358c9bd48)
+        ;
+
+        
+    
+    
+            var circle_marker_87e19fe02926c1fbd4a67524d723d21d = L.circleMarker(
+                [10.7867, 76.6548],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_f3fe2ac3e14d21e77fd8cc7167ed30cd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d6c981848303d2a6b26a03d8cc381004 = $(`<div id="html_d6c981848303d2a6b26a03d8cc381004" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Private Unaided (Recognized)<br>Total: 186</div>`)[0];
+                popup_f3fe2ac3e14d21e77fd8cc7167ed30cd.setContent(html_d6c981848303d2a6b26a03d8cc381004);
+            
+        
+
+        circle_marker_87e19fe02926c1fbd4a67524d723d21d.bindPopup(popup_f3fe2ac3e14d21e77fd8cc7167ed30cd)
+        ;
+
+        
+    
+    
+            var circle_marker_8515d4f674fa2943501369584e1e9f26 = L.circleMarker(
+                [10.7867, 76.6548],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_7329025eb1dc4623879d8eb9e6248d9b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9d4b1eef2af9b02d25c71da3d7b80b32 = $(`<div id="html_9d4b1eef2af9b02d25c71da3d7b80b32" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Unrecognized<br>Total: 53</div>`)[0];
+                popup_7329025eb1dc4623879d8eb9e6248d9b.setContent(html_9d4b1eef2af9b02d25c71da3d7b80b32);
+            
+        
+
+        circle_marker_8515d4f674fa2943501369584e1e9f26.bindPopup(popup_7329025eb1dc4623879d8eb9e6248d9b)
+        ;
+
+        
+    
+    
+            var circle_marker_d5606788644d361b14c22ccca18e8def = L.circleMarker(
+                [10.7867, 76.6548],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_7c2b09e5f69e3b807090586333162436 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_61357da6bcd027c91f8e84df6b977d19 = $(`<div id="html_61357da6bcd027c91f8e84df6b977d19" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Kendriya Vidyalaya / Central School<br>Total: 1</div>`)[0];
+                popup_7c2b09e5f69e3b807090586333162436.setContent(html_61357da6bcd027c91f8e84df6b977d19);
+            
+        
+
+        circle_marker_d5606788644d361b14c22ccca18e8def.bindPopup(popup_7c2b09e5f69e3b807090586333162436)
+        ;
+
+        
+    
+    
+            var circle_marker_d92af32fe738b569869e876a2ae3e3c2 = L.circleMarker(
+                [10.7867, 76.6548],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_0ecb34d0733f31d99e67a332183a47c4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cb2f98cbec34abbe79da1fdfca94c592 = $(`<div id="html_cb2f98cbec34abbe79da1fdfca94c592" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_0ecb34d0733f31d99e67a332183a47c4.setContent(html_cb2f98cbec34abbe79da1fdfca94c592);
+            
+        
+
+        circle_marker_d92af32fe738b569869e876a2ae3e3c2.bindPopup(popup_0ecb34d0733f31d99e67a332183a47c4)
+        ;
+
+        
+    
+    
+            var circle_marker_097a53cc3f39ab23b9cf68b11fe48cd4 = L.circleMarker(
+                [10.7867, 76.6548],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_8983ce22abac08473f95209e932472f0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f6d293adc771127813436d9fb3be896b = $(`<div id="html_f6d293adc771127813436d9fb3be896b" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Madarsa recognized (by Wakf board/Madarsa Board)<br>Total: 1</div>`)[0];
+                popup_8983ce22abac08473f95209e932472f0.setContent(html_f6d293adc771127813436d9fb3be896b);
+            
+        
+
+        circle_marker_097a53cc3f39ab23b9cf68b11fe48cd4.bindPopup(popup_8983ce22abac08473f95209e932472f0)
+        ;
+
+        
+    
+    
+            var circle_marker_d2b3e44d61a795761b183dee0b9c0518 = L.circleMarker(
+                [10.7867, 76.6548],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 194.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_6ade5fcf4785dcf8babee5c1df524d07 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f3b719508a5df67ea7e3666b9ef50f02 = $(`<div id="html_f3b719508a5df67ea7e3666b9ef50f02" style="width: 100.0%; height: 100.0%;">Location: ALAPPUZHA<br>Management: Overall<br>Total: 973</div>`)[0];
+                popup_6ade5fcf4785dcf8babee5c1df524d07.setContent(html_f3b719508a5df67ea7e3666b9ef50f02);
+            
+        
+
+        circle_marker_d2b3e44d61a795761b183dee0b9c0518.bindPopup(popup_6ade5fcf4785dcf8babee5c1df524d07)
+        ;
+
+        
+    
+    
+            var circle_marker_3c725926050a08a89c06442d87069b8f = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 74.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_e38a9feff8b04474331f9757577d59eb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0ba386cf6ba6b18257aba1e2d24770a1 = $(`<div id="html_0ba386cf6ba6b18257aba1e2d24770a1" style="width: 100.0%; height: 100.0%;">Location: ERNAKULAM<br>Management: Department of Education<br>Total: 371</div>`)[0];
+                popup_e38a9feff8b04474331f9757577d59eb.setContent(html_0ba386cf6ba6b18257aba1e2d24770a1);
+            
+        
+
+        circle_marker_3c725926050a08a89c06442d87069b8f.bindPopup(popup_e38a9feff8b04474331f9757577d59eb)
+        ;
+
+        
+    
+    
+            var circle_marker_a5723f08b9b8e5da49ff902a77642ab8 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_f2a8e5b7e41bdde6ae165d0adeb99104 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7d2e4644dfe6aa97c20f3301a39b8224 = $(`<div id="html_7d2e4644dfe6aa97c20f3301a39b8224" style="width: 100.0%; height: 100.0%;">Location: ERNAKULAM<br>Management: Tribal Welfare Department<br>Total: 1</div>`)[0];
+                popup_f2a8e5b7e41bdde6ae165d0adeb99104.setContent(html_7d2e4644dfe6aa97c20f3301a39b8224);
+            
+        
+
+        circle_marker_a5723f08b9b8e5da49ff902a77642ab8.bindPopup(popup_f2a8e5b7e41bdde6ae165d0adeb99104)
+        ;
+
+        
+    
+    
+            var circle_marker_925c4545b8a362467ef252b1552494f2 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_80872cf8e641f724b5a5d6f868e7dddb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1aca94cd23576b68fe20e2448ac71abd = $(`<div id="html_1aca94cd23576b68fe20e2448ac71abd" style="width: 100.0%; height: 100.0%;">Location: ERNAKULAM<br>Management: Local body<br>Total: 7</div>`)[0];
+                popup_80872cf8e641f724b5a5d6f868e7dddb.setContent(html_1aca94cd23576b68fe20e2448ac71abd);
+            
+        
+
+        circle_marker_925c4545b8a362467ef252b1552494f2.bindPopup(popup_80872cf8e641f724b5a5d6f868e7dddb)
+        ;
+
+        
+    
+    
+            var circle_marker_cdccda8508cafecae9d224c2de2699d8 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 106.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_beda9d4ceb76b8ba5d194043554adc6f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_300be0e44c6aaa8d48ba2dc58ec07a11 = $(`<div id="html_300be0e44c6aaa8d48ba2dc58ec07a11" style="width: 100.0%; height: 100.0%;">Location: ERNAKULAM<br>Management: Government Aided<br>Total: 530</div>`)[0];
+                popup_beda9d4ceb76b8ba5d194043554adc6f.setContent(html_300be0e44c6aaa8d48ba2dc58ec07a11);
+            
+        
+
+        circle_marker_cdccda8508cafecae9d224c2de2699d8.bindPopup(popup_beda9d4ceb76b8ba5d194043554adc6f)
+        ;
+
+        
+    
+    
+            var circle_marker_839e930274f14d6968225a08180c3a31 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 78.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_2f272094438fa3ddf9fc8bed46ce9add = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d5f6125b6ac2e77223a1fabeac9a9081 = $(`<div id="html_d5f6125b6ac2e77223a1fabeac9a9081" style="width: 100.0%; height: 100.0%;">Location: ERNAKULAM<br>Management: Private Unaided (Recognized)<br>Total: 392</div>`)[0];
+                popup_2f272094438fa3ddf9fc8bed46ce9add.setContent(html_d5f6125b6ac2e77223a1fabeac9a9081);
+            
+        
+
+        circle_marker_839e930274f14d6968225a08180c3a31.bindPopup(popup_2f272094438fa3ddf9fc8bed46ce9add)
+        ;
+
+        
+    
+    
+            var circle_marker_3928aa05c31a2a723fd1bbf914ae70e6 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_1d494931aac1c496307c2df2d5d4d1e0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eec9e4a398f84f2ca25aa96727a22542 = $(`<div id="html_eec9e4a398f84f2ca25aa96727a22542" style="width: 100.0%; height: 100.0%;">Location: ERNAKULAM<br>Management: Other Govt. managed schools<br>Total: 5</div>`)[0];
+                popup_1d494931aac1c496307c2df2d5d4d1e0.setContent(html_eec9e4a398f84f2ca25aa96727a22542);
+            
+        
+
+        circle_marker_3928aa05c31a2a723fd1bbf914ae70e6.bindPopup(popup_1d494931aac1c496307c2df2d5d4d1e0)
+        ;
+
+        
+    
+    
+            var circle_marker_6580918e0c70f0e4b7ee519242890ba3 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_e5be9e82668c3730b9d52bce31b1b3bd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_47b5e95a83f0bccd961bb974ff45066c = $(`<div id="html_47b5e95a83f0bccd961bb974ff45066c" style="width: 100.0%; height: 100.0%;">Location: ERNAKULAM<br>Management: Unrecognized<br>Total: 48</div>`)[0];
+                popup_e5be9e82668c3730b9d52bce31b1b3bd.setContent(html_47b5e95a83f0bccd961bb974ff45066c);
+            
+        
+
+        circle_marker_6580918e0c70f0e4b7ee519242890ba3.bindPopup(popup_e5be9e82668c3730b9d52bce31b1b3bd)
+        ;
+
+        
+    
+    
+            var circle_marker_62e8dc085f5f28b45bea9790265ee695 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_aa30c7b3a357998bf65f655d938e9bbb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_70e0402beb9a35870f42fb3fa4bbdcec = $(`<div id="html_70e0402beb9a35870f42fb3fa4bbdcec" style="width: 100.0%; height: 100.0%;">Location: ERNAKULAM<br>Management: Kendriya Vidyalaya / Central School<br>Total: 6</div>`)[0];
+                popup_aa30c7b3a357998bf65f655d938e9bbb.setContent(html_70e0402beb9a35870f42fb3fa4bbdcec);
+            
+        
+
+        circle_marker_62e8dc085f5f28b45bea9790265ee695.bindPopup(popup_aa30c7b3a357998bf65f655d938e9bbb)
+        ;
+
+        
+    
+    
+            var circle_marker_a3cf0f9bb82abfa94ac2d8e048cfe106 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_d96bd80cf3dc5461506d2063aa6e878f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e4d0e6cb4150fece50a06ab0eb90734e = $(`<div id="html_e4d0e6cb4150fece50a06ab0eb90734e" style="width: 100.0%; height: 100.0%;">Location: ERNAKULAM<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_d96bd80cf3dc5461506d2063aa6e878f.setContent(html_e4d0e6cb4150fece50a06ab0eb90734e);
+            
+        
+
+        circle_marker_a3cf0f9bb82abfa94ac2d8e048cfe106.bindPopup(popup_d96bd80cf3dc5461506d2063aa6e878f)
+        ;
+
+        
+    
+    
+            var circle_marker_53fb3fd056bfccf003a02339b10ca518 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 272.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_61311abe818b38949e66014d716bbfe7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a53da69f03fe2f00f96d6fdf11776c10 = $(`<div id="html_a53da69f03fe2f00f96d6fdf11776c10" style="width: 100.0%; height: 100.0%;">Location: ERNAKULAM<br>Management: Overall<br>Total: 1361</div>`)[0];
+                popup_61311abe818b38949e66014d716bbfe7.setContent(html_a53da69f03fe2f00f96d6fdf11776c10);
+            
+        
+
+        circle_marker_53fb3fd056bfccf003a02339b10ca518.bindPopup(popup_61311abe818b38949e66014d716bbfe7)
+        ;
+
+        
+    
+    
+            var circle_marker_3b9c3932fedbbfea4509bd49bdc40416 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 40.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_4a8a9182464b50af2ecaade322289365 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_75cfcb021d4758142fea2489934162f4 = $(`<div id="html_75cfcb021d4758142fea2489934162f4" style="width: 100.0%; height: 100.0%;">Location: IDUKKI<br>Management: Department of Education<br>Total: 201</div>`)[0];
+                popup_4a8a9182464b50af2ecaade322289365.setContent(html_75cfcb021d4758142fea2489934162f4);
+            
+        
+
+        circle_marker_3b9c3932fedbbfea4509bd49bdc40416.bindPopup(popup_4a8a9182464b50af2ecaade322289365)
+        ;
+
+        
+    
+    
+            var circle_marker_112d4f82d3b4b927ef3f9b0cca8eb2aa = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_227ccb52faf6b606901953014b5e1ec3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_418d581f07e79f324fa54c3e35c55c92 = $(`<div id="html_418d581f07e79f324fa54c3e35c55c92" style="width: 100.0%; height: 100.0%;">Location: IDUKKI<br>Management: Tribal Welfare Department<br>Total: 19</div>`)[0];
+                popup_227ccb52faf6b606901953014b5e1ec3.setContent(html_418d581f07e79f324fa54c3e35c55c92);
+            
+        
+
+        circle_marker_112d4f82d3b4b927ef3f9b0cca8eb2aa.bindPopup(popup_227ccb52faf6b606901953014b5e1ec3)
+        ;
+
+        
+    
+    
+            var circle_marker_b3fa327616250e09a2c639a629e96ad8 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 51.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_876b4c00de1c1d2dc281cc1acc75feb8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_823b3daeea9715bef5ccecf0c0e552d9 = $(`<div id="html_823b3daeea9715bef5ccecf0c0e552d9" style="width: 100.0%; height: 100.0%;">Location: IDUKKI<br>Management: Government Aided<br>Total: 256</div>`)[0];
+                popup_876b4c00de1c1d2dc281cc1acc75feb8.setContent(html_823b3daeea9715bef5ccecf0c0e552d9);
+            
+        
+
+        circle_marker_b3fa327616250e09a2c639a629e96ad8.bindPopup(popup_876b4c00de1c1d2dc281cc1acc75feb8)
+        ;
+
+        
+    
+    
+            var circle_marker_2f1e29098c110ee0846b8be383641879 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_7f7692e0c33356f84421a2a51928d843 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ab61215cf03e0980ec1f689b200640a9 = $(`<div id="html_ab61215cf03e0980ec1f689b200640a9" style="width: 100.0%; height: 100.0%;">Location: IDUKKI<br>Management: Private Unaided (Recognized)<br>Total: 108</div>`)[0];
+                popup_7f7692e0c33356f84421a2a51928d843.setContent(html_ab61215cf03e0980ec1f689b200640a9);
+            
+        
+
+        circle_marker_2f1e29098c110ee0846b8be383641879.bindPopup(popup_7f7692e0c33356f84421a2a51928d843)
+        ;
+
+        
+    
+    
+            var circle_marker_e5eb91253dbcbbef65924d15e80d4f55 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_4389ce273f98cf6cc2fd5faf762ee989 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_83735b19f1af3263c35aac59ced6ef2e = $(`<div id="html_83735b19f1af3263c35aac59ced6ef2e" style="width: 100.0%; height: 100.0%;">Location: IDUKKI<br>Management: Other Govt. managed schools<br>Total: 57</div>`)[0];
+                popup_4389ce273f98cf6cc2fd5faf762ee989.setContent(html_83735b19f1af3263c35aac59ced6ef2e);
+            
+        
+
+        circle_marker_e5eb91253dbcbbef65924d15e80d4f55.bindPopup(popup_4389ce273f98cf6cc2fd5faf762ee989)
+        ;
+
+        
+    
+    
+            var circle_marker_01f12c440884608b92b113aada2da32a = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 4.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_c248d9cef3d3031408be81d0dbeb19ef = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_71c74354bb453f1dddfe17a06ee9daa1 = $(`<div id="html_71c74354bb453f1dddfe17a06ee9daa1" style="width: 100.0%; height: 100.0%;">Location: IDUKKI<br>Management: Unrecognized<br>Total: 24</div>`)[0];
+                popup_c248d9cef3d3031408be81d0dbeb19ef.setContent(html_71c74354bb453f1dddfe17a06ee9daa1);
+            
+        
+
+        circle_marker_01f12c440884608b92b113aada2da32a.bindPopup(popup_c248d9cef3d3031408be81d0dbeb19ef)
+        ;
+
+        
+    
+    
+            var circle_marker_c9732f74acbffe34dc7cdc4dbb05aaee = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_229d38de5f5552fdab8b6c68bfd4ac0d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b5234f5b4fafd9cdb98d29a80b29edf9 = $(`<div id="html_b5234f5b4fafd9cdb98d29a80b29edf9" style="width: 100.0%; height: 100.0%;">Location: IDUKKI<br>Management: Kendriya Vidyalaya / Central School<br>Total: 1</div>`)[0];
+                popup_229d38de5f5552fdab8b6c68bfd4ac0d.setContent(html_b5234f5b4fafd9cdb98d29a80b29edf9);
+            
+        
+
+        circle_marker_c9732f74acbffe34dc7cdc4dbb05aaee.bindPopup(popup_229d38de5f5552fdab8b6c68bfd4ac0d)
+        ;
+
+        
+    
+    
+            var circle_marker_00d6eb8cc87774ef84d99a8f5e45ed9d = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_e7f21102d12dc6da26732372b11b9168 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fd754091c1ba403028e4f68ed80fa7e2 = $(`<div id="html_fd754091c1ba403028e4f68ed80fa7e2" style="width: 100.0%; height: 100.0%;">Location: IDUKKI<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_e7f21102d12dc6da26732372b11b9168.setContent(html_fd754091c1ba403028e4f68ed80fa7e2);
+            
+        
+
+        circle_marker_00d6eb8cc87774ef84d99a8f5e45ed9d.bindPopup(popup_e7f21102d12dc6da26732372b11b9168)
+        ;
+
+        
+    
+    
+            var circle_marker_8488725b82aaeff7f22b1e18fcabb913 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 133.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_e9840cf81b06e2fc03c9accd2af6d520 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_56f72a29080025a36f63f183d6fd8519 = $(`<div id="html_56f72a29080025a36f63f183d6fd8519" style="width: 100.0%; height: 100.0%;">Location: IDUKKI<br>Management: Overall<br>Total: 667</div>`)[0];
+                popup_e9840cf81b06e2fc03c9accd2af6d520.setContent(html_56f72a29080025a36f63f183d6fd8519);
+            
+        
+
+        circle_marker_8488725b82aaeff7f22b1e18fcabb913.bindPopup(popup_e9840cf81b06e2fc03c9accd2af6d520)
+        ;
+
+        
+    
+    
+            var circle_marker_8621be9ce8e3ada6fbf1c3353acf43fe = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 57.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_de5395167bbdb91c97eb7536a954cbf4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7d5022432b4beaee1688cf1ec8c581ab = $(`<div id="html_7d5022432b4beaee1688cf1ec8c581ab" style="width: 100.0%; height: 100.0%;">Location: KANNUR<br>Management: Department of Education<br>Total: 285</div>`)[0];
+                popup_de5395167bbdb91c97eb7536a954cbf4.setContent(html_7d5022432b4beaee1688cf1ec8c581ab);
+            
+        
+
+        circle_marker_8621be9ce8e3ada6fbf1c3353acf43fe.bindPopup(popup_de5395167bbdb91c97eb7536a954cbf4)
+        ;
+
+        
+    
+    
+            var circle_marker_e0791d11fef356ec5136dabe886aa279 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_cbefac1cbf53cb2d03254d3015dde2fd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a0bc8dc5c734c092e7e41fd8fb2accad = $(`<div id="html_a0bc8dc5c734c092e7e41fd8fb2accad" style="width: 100.0%; height: 100.0%;">Location: KANNUR<br>Management: Tribal Welfare Department<br>Total: 1</div>`)[0];
+                popup_cbefac1cbf53cb2d03254d3015dde2fd.setContent(html_a0bc8dc5c734c092e7e41fd8fb2accad);
+            
+        
+
+        circle_marker_e0791d11fef356ec5136dabe886aa279.bindPopup(popup_cbefac1cbf53cb2d03254d3015dde2fd)
+        ;
+
+        
+    
+    
+            var circle_marker_a71b33047a2366bea66c52e4263e0632 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_1b4baddf1b90bfc7132805949bfa496b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c8fc2a4949a2947a441b518abac8661c = $(`<div id="html_c8fc2a4949a2947a441b518abac8661c" style="width: 100.0%; height: 100.0%;">Location: KANNUR<br>Management: Local body<br>Total: 6</div>`)[0];
+                popup_1b4baddf1b90bfc7132805949bfa496b.setContent(html_c8fc2a4949a2947a441b518abac8661c);
+            
+        
+
+        circle_marker_a71b33047a2366bea66c52e4263e0632.bindPopup(popup_1b4baddf1b90bfc7132805949bfa496b)
+        ;
+
+        
+    
+    
+            var circle_marker_f5be77bb08ad3bbf9a6e697647f37740 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 192.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_f0bbb83760757454c9a08cc0aa9c6c1b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6159ab6590d077d4fe47b2c722e0e541 = $(`<div id="html_6159ab6590d077d4fe47b2c722e0e541" style="width: 100.0%; height: 100.0%;">Location: KANNUR<br>Management: Government Aided<br>Total: 963</div>`)[0];
+                popup_f0bbb83760757454c9a08cc0aa9c6c1b.setContent(html_6159ab6590d077d4fe47b2c722e0e541);
+            
+        
+
+        circle_marker_f5be77bb08ad3bbf9a6e697647f37740.bindPopup(popup_f0bbb83760757454c9a08cc0aa9c6c1b)
+        ;
+
+        
+    
+    
+            var circle_marker_5f53864a34204b77728e18e6b65211b3 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 43.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_245fb288554caac2f9d409a0f59e5200 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_665f027aa0e1455199cf6fdf740ef644 = $(`<div id="html_665f027aa0e1455199cf6fdf740ef644" style="width: 100.0%; height: 100.0%;">Location: KANNUR<br>Management: Private Unaided (Recognized)<br>Total: 215</div>`)[0];
+                popup_245fb288554caac2f9d409a0f59e5200.setContent(html_665f027aa0e1455199cf6fdf740ef644);
+            
+        
+
+        circle_marker_5f53864a34204b77728e18e6b65211b3.bindPopup(popup_245fb288554caac2f9d409a0f59e5200)
+        ;
+
+        
+    
+    
+            var circle_marker_aab994c93fcdde13fdb08893caa61dd2 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_1e4d48da7f38c30684206dbe6687aa34 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a65a65ab806a0879d9f754abd11c1148 = $(`<div id="html_a65a65ab806a0879d9f754abd11c1148" style="width: 100.0%; height: 100.0%;">Location: KANNUR<br>Management: Other Govt. managed schools<br>Total: 14</div>`)[0];
+                popup_1e4d48da7f38c30684206dbe6687aa34.setContent(html_a65a65ab806a0879d9f754abd11c1148);
+            
+        
+
+        circle_marker_aab994c93fcdde13fdb08893caa61dd2.bindPopup(popup_1e4d48da7f38c30684206dbe6687aa34)
+        ;
+
+        
+    
+    
+            var circle_marker_39d20d4d07071957dc71c74cb69bab75 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_ba95fdd148cd96511f22d4da7052ead5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_51b98162ea6931e782585775c88a715c = $(`<div id="html_51b98162ea6931e782585775c88a715c" style="width: 100.0%; height: 100.0%;">Location: KANNUR<br>Management: Unrecognized<br>Total: 85</div>`)[0];
+                popup_ba95fdd148cd96511f22d4da7052ead5.setContent(html_51b98162ea6931e782585775c88a715c);
+            
+        
+
+        circle_marker_39d20d4d07071957dc71c74cb69bab75.bindPopup(popup_ba95fdd148cd96511f22d4da7052ead5)
+        ;
+
+        
+    
+    
+            var circle_marker_c466defd7250062d657b9a213b1f0fc1 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_7395ea1c98daf01a7bdf63b5a319ec13 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3dac90b12adacf34b2ff2c812904f6e9 = $(`<div id="html_3dac90b12adacf34b2ff2c812904f6e9" style="width: 100.0%; height: 100.0%;">Location: KANNUR<br>Management: Kendriya Vidyalaya / Central School<br>Total: 6</div>`)[0];
+                popup_7395ea1c98daf01a7bdf63b5a319ec13.setContent(html_3dac90b12adacf34b2ff2c812904f6e9);
+            
+        
+
+        circle_marker_c466defd7250062d657b9a213b1f0fc1.bindPopup(popup_7395ea1c98daf01a7bdf63b5a319ec13)
+        ;
+
+        
+    
+    
+            var circle_marker_1654bc80108f601b1f55e977ec2c232d = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_932c1bd584a679b48e63db1f09896c83 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c4ae92f94e4052792ae13fddf7109c09 = $(`<div id="html_c4ae92f94e4052792ae13fddf7109c09" style="width: 100.0%; height: 100.0%;">Location: KANNUR<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_932c1bd584a679b48e63db1f09896c83.setContent(html_c4ae92f94e4052792ae13fddf7109c09);
+            
+        
+
+        circle_marker_1654bc80108f601b1f55e977ec2c232d.bindPopup(popup_932c1bd584a679b48e63db1f09896c83)
+        ;
+
+        
+    
+    
+            var circle_marker_5377474ec627ddb8169c6407c91461a7 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 315.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_6d96308ccb622646c16afef6c920da33 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_da2cad0e1b3e6865337ecd4cfc3aa7e0 = $(`<div id="html_da2cad0e1b3e6865337ecd4cfc3aa7e0" style="width: 100.0%; height: 100.0%;">Location: KANNUR<br>Management: Overall<br>Total: 1576</div>`)[0];
+                popup_6d96308ccb622646c16afef6c920da33.setContent(html_da2cad0e1b3e6865337ecd4cfc3aa7e0);
+            
+        
+
+        circle_marker_5377474ec627ddb8169c6407c91461a7.bindPopup(popup_6d96308ccb622646c16afef6c920da33)
+        ;
+
+        
+    
+    
+            var circle_marker_9a74b7155d19a8d5f5e39c7adecf5632 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 59.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_965187b9845df7d5363d599f4cb854d5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_407dd348b89a8b386b7d61c53bd68c60 = $(`<div id="html_407dd348b89a8b386b7d61c53bd68c60" style="width: 100.0%; height: 100.0%;">Location: KASARAGOD<br>Management: Department of Education<br>Total: 299</div>`)[0];
+                popup_965187b9845df7d5363d599f4cb854d5.setContent(html_407dd348b89a8b386b7d61c53bd68c60);
+            
+        
+
+        circle_marker_9a74b7155d19a8d5f5e39c7adecf5632.bindPopup(popup_965187b9845df7d5363d599f4cb854d5)
+        ;
+
+        
+    
+    
+            var circle_marker_55f6d1dd3800dd2607a586cd1b67e967 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_2ce48de70a9c59a556a550e446fb7352 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0fc21bed87a318a89451ef428d4ed0b9 = $(`<div id="html_0fc21bed87a318a89451ef428d4ed0b9" style="width: 100.0%; height: 100.0%;">Location: KASARAGOD<br>Management: Tribal Welfare Department<br>Total: 2</div>`)[0];
+                popup_2ce48de70a9c59a556a550e446fb7352.setContent(html_0fc21bed87a318a89451ef428d4ed0b9);
+            
+        
+
+        circle_marker_55f6d1dd3800dd2607a586cd1b67e967.bindPopup(popup_2ce48de70a9c59a556a550e446fb7352)
+        ;
+
+        
+    
+    
+            var circle_marker_d5d8a21a018a483fbf5ddee96d7291e6 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 43.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_70bee9d6512d9b38a40902995709b005 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e89cf1800aea0108c562177cda2825e2 = $(`<div id="html_e89cf1800aea0108c562177cda2825e2" style="width: 100.0%; height: 100.0%;">Location: KASARAGOD<br>Management: Government Aided<br>Total: 216</div>`)[0];
+                popup_70bee9d6512d9b38a40902995709b005.setContent(html_e89cf1800aea0108c562177cda2825e2);
+            
+        
+
+        circle_marker_d5d8a21a018a483fbf5ddee96d7291e6.bindPopup(popup_70bee9d6512d9b38a40902995709b005)
+        ;
+
+        
+    
+    
+            var circle_marker_077daefc9cdb727be299e2ae041b510f = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 41.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_c78812723f9d1305dd0e46f087a33a2a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a0e3e314bfadbec864fef75dcd9cc28b = $(`<div id="html_a0e3e314bfadbec864fef75dcd9cc28b" style="width: 100.0%; height: 100.0%;">Location: KASARAGOD<br>Management: Private Unaided (Recognized)<br>Total: 205</div>`)[0];
+                popup_c78812723f9d1305dd0e46f087a33a2a.setContent(html_a0e3e314bfadbec864fef75dcd9cc28b);
+            
+        
+
+        circle_marker_077daefc9cdb727be299e2ae041b510f.bindPopup(popup_c78812723f9d1305dd0e46f087a33a2a)
+        ;
+
+        
+    
+    
+            var circle_marker_5b7027d94fb520ad11260c47039e832f = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_d6ec8231a24bdd924d57b8c190090dc8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_278efc6f5b786f2ad26be4049ef1e846 = $(`<div id="html_278efc6f5b786f2ad26be4049ef1e846" style="width: 100.0%; height: 100.0%;">Location: KASARAGOD<br>Management: Unrecognized<br>Total: 29</div>`)[0];
+                popup_d6ec8231a24bdd924d57b8c190090dc8.setContent(html_278efc6f5b786f2ad26be4049ef1e846);
+            
+        
+
+        circle_marker_5b7027d94fb520ad11260c47039e832f.bindPopup(popup_d6ec8231a24bdd924d57b8c190090dc8)
+        ;
+
+        
+    
+    
+            var circle_marker_e4023bc86897e9aa5cefcf8e3febf033 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_8f2085792b6ebe4e2047087aafccf542 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ef9b5dd509954015f8cbfa2b793425a2 = $(`<div id="html_ef9b5dd509954015f8cbfa2b793425a2" style="width: 100.0%; height: 100.0%;">Location: KASARAGOD<br>Management: Kendriya Vidyalaya / Central School<br>Total: 4</div>`)[0];
+                popup_8f2085792b6ebe4e2047087aafccf542.setContent(html_ef9b5dd509954015f8cbfa2b793425a2);
+            
+        
+
+        circle_marker_e4023bc86897e9aa5cefcf8e3febf033.bindPopup(popup_8f2085792b6ebe4e2047087aafccf542)
+        ;
+
+        
+    
+    
+            var circle_marker_eb76847b8045037ed1c818af84f9c6b2 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_3da61754d3a4c0b5696e1ac45bfa3298 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_977b5391f5e5327b7e803bc86fb89580 = $(`<div id="html_977b5391f5e5327b7e803bc86fb89580" style="width: 100.0%; height: 100.0%;">Location: KASARAGOD<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_3da61754d3a4c0b5696e1ac45bfa3298.setContent(html_977b5391f5e5327b7e803bc86fb89580);
+            
+        
+
+        circle_marker_eb76847b8045037ed1c818af84f9c6b2.bindPopup(popup_3da61754d3a4c0b5696e1ac45bfa3298)
+        ;
+
+        
+    
+    
+            var circle_marker_1e7d6274916d55140e06e1076ff2b758 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 151.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_8596aded3adedcf8387d517902649caf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_08c2784ff37c57dc0776311724adb79e = $(`<div id="html_08c2784ff37c57dc0776311724adb79e" style="width: 100.0%; height: 100.0%;">Location: KASARAGOD<br>Management: Overall<br>Total: 756</div>`)[0];
+                popup_8596aded3adedcf8387d517902649caf.setContent(html_08c2784ff37c57dc0776311724adb79e);
+            
+        
+
+        circle_marker_1e7d6274916d55140e06e1076ff2b758.bindPopup(popup_8596aded3adedcf8387d517902649caf)
+        ;
+
+        
+    
+    
+            var circle_marker_7cc6809b2b8e2327f7305ff7b910df17 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 85.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_f635b255805648b02d14cffd3fa1ebed = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cb1b5498a5b8e7ded1487214c8639cbd = $(`<div id="html_cb1b5498a5b8e7ded1487214c8639cbd" style="width: 100.0%; height: 100.0%;">Location: KOLLAM<br>Management: Department of Education<br>Total: 428</div>`)[0];
+                popup_f635b255805648b02d14cffd3fa1ebed.setContent(html_cb1b5498a5b8e7ded1487214c8639cbd);
+            
+        
+
+        circle_marker_7cc6809b2b8e2327f7305ff7b910df17.bindPopup(popup_f635b255805648b02d14cffd3fa1ebed)
+        ;
+
+        
+    
+    
+            var circle_marker_f7d04e13adb4508602b874d66f2f1aa2 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_c4417765a2f039aa1fdeac2c49214350 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cb17d30d394a22b66913dfb0873db2b2 = $(`<div id="html_cb17d30d394a22b66913dfb0873db2b2" style="width: 100.0%; height: 100.0%;">Location: KOLLAM<br>Management: Tribal Welfare Department<br>Total: 1</div>`)[0];
+                popup_c4417765a2f039aa1fdeac2c49214350.setContent(html_cb17d30d394a22b66913dfb0873db2b2);
+            
+        
+
+        circle_marker_f7d04e13adb4508602b874d66f2f1aa2.bindPopup(popup_c4417765a2f039aa1fdeac2c49214350)
+        ;
+
+        
+    
+    
+            var circle_marker_2637d180143079b445c66cbde4e34790 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_187c8774730a23e366649c680a2267b9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b74b8ac48f4973326e30a4138fc7ef18 = $(`<div id="html_b74b8ac48f4973326e30a4138fc7ef18" style="width: 100.0%; height: 100.0%;">Location: KOLLAM<br>Management: Local body<br>Total: 1</div>`)[0];
+                popup_187c8774730a23e366649c680a2267b9.setContent(html_b74b8ac48f4973326e30a4138fc7ef18);
+            
+        
+
+        circle_marker_2637d180143079b445c66cbde4e34790.bindPopup(popup_187c8774730a23e366649c680a2267b9)
+        ;
+
+        
+    
+    
+            var circle_marker_63dca2ce9f8e2195a295d479bf75c15e = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 87.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_20754d3c916a291b219f293f233e9503 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_87f0d163d00602185a6c5c3a3f4365f2 = $(`<div id="html_87f0d163d00602185a6c5c3a3f4365f2" style="width: 100.0%; height: 100.0%;">Location: KOLLAM<br>Management: Government Aided<br>Total: 439</div>`)[0];
+                popup_20754d3c916a291b219f293f233e9503.setContent(html_87f0d163d00602185a6c5c3a3f4365f2);
+            
+        
+
+        circle_marker_63dca2ce9f8e2195a295d479bf75c15e.bindPopup(popup_20754d3c916a291b219f293f233e9503)
+        ;
+
+        
+    
+    
+            var circle_marker_d3a5aaf1a50b6d552485aa59bcbbdff2 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 44.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_d4aecfbcc932de93b559c249a856d04d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9d115049ca42b0ca593b8ff6d3cf1247 = $(`<div id="html_9d115049ca42b0ca593b8ff6d3cf1247" style="width: 100.0%; height: 100.0%;">Location: KOLLAM<br>Management: Private Unaided (Recognized)<br>Total: 224</div>`)[0];
+                popup_d4aecfbcc932de93b559c249a856d04d.setContent(html_9d115049ca42b0ca593b8ff6d3cf1247);
+            
+        
+
+        circle_marker_d3a5aaf1a50b6d552485aa59bcbbdff2.bindPopup(popup_d4aecfbcc932de93b559c249a856d04d)
+        ;
+
+        
+    
+    
+            var circle_marker_8c87672e37750a5fcc60b331dc228378 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_c891acd1337548967dca612b2d3b8018 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_67435fd3ad06ef32b55640a28fb6d8fa = $(`<div id="html_67435fd3ad06ef32b55640a28fb6d8fa" style="width: 100.0%; height: 100.0%;">Location: KOLLAM<br>Management: Unrecognized<br>Total: 110</div>`)[0];
+                popup_c891acd1337548967dca612b2d3b8018.setContent(html_67435fd3ad06ef32b55640a28fb6d8fa);
+            
+        
+
+        circle_marker_8c87672e37750a5fcc60b331dc228378.bindPopup(popup_c891acd1337548967dca612b2d3b8018)
+        ;
+
+        
+    
+    
+            var circle_marker_e5b3555b6556f16f7ce9d33a16627298 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_c5fdc7bf5dd06e85d140960ec84ae63d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b7768a7c46cc352e532e2856bfce7da7 = $(`<div id="html_b7768a7c46cc352e532e2856bfce7da7" style="width: 100.0%; height: 100.0%;">Location: KOLLAM<br>Management: Kendriya Vidyalaya / Central School<br>Total: 1</div>`)[0];
+                popup_c5fdc7bf5dd06e85d140960ec84ae63d.setContent(html_b7768a7c46cc352e532e2856bfce7da7);
+            
+        
+
+        circle_marker_e5b3555b6556f16f7ce9d33a16627298.bindPopup(popup_c5fdc7bf5dd06e85d140960ec84ae63d)
+        ;
+
+        
+    
+    
+            var circle_marker_bec99078ab762a4f821f856bd0be8a97 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_e9dac950faeec4070a03a11991ec057a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_584123224a64f14f232c98c5dfd1b6a1 = $(`<div id="html_584123224a64f14f232c98c5dfd1b6a1" style="width: 100.0%; height: 100.0%;">Location: KOLLAM<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_e9dac950faeec4070a03a11991ec057a.setContent(html_584123224a64f14f232c98c5dfd1b6a1);
+            
+        
+
+        circle_marker_bec99078ab762a4f821f856bd0be8a97.bindPopup(popup_e9dac950faeec4070a03a11991ec057a)
+        ;
+
+        
+    
+    
+            var circle_marker_dcf5e910e85b4af69d5f92d299000a30 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 241.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_9aa9278cfa0eebe3dd8629387c08ae13 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d829cbfd1771f9df6d3de6f04b5302a8 = $(`<div id="html_d829cbfd1771f9df6d3de6f04b5302a8" style="width: 100.0%; height: 100.0%;">Location: KOLLAM<br>Management: Overall<br>Total: 1205</div>`)[0];
+                popup_9aa9278cfa0eebe3dd8629387c08ae13.setContent(html_d829cbfd1771f9df6d3de6f04b5302a8);
+            
+        
+
+        circle_marker_dcf5e910e85b4af69d5f92d299000a30.bindPopup(popup_9aa9278cfa0eebe3dd8629387c08ae13)
+        ;
+
+        
+    
+    
+            var circle_marker_9076995be304ef583405389c35b4fba6 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 61.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_ec2a22167af184fc0669465e87bc76ba = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9a0b844bdae3252b8d7a59555abd2fea = $(`<div id="html_9a0b844bdae3252b8d7a59555abd2fea" style="width: 100.0%; height: 100.0%;">Location: KOTTAYAM<br>Management: Department of Education<br>Total: 308</div>`)[0];
+                popup_ec2a22167af184fc0669465e87bc76ba.setContent(html_9a0b844bdae3252b8d7a59555abd2fea);
+            
+        
+
+        circle_marker_9076995be304ef583405389c35b4fba6.bindPopup(popup_ec2a22167af184fc0669465e87bc76ba)
+        ;
+
+        
+    
+    
+            var circle_marker_d7403170b847164b6a58ac9ca5bfe7d0 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_cf2224461a8cffb30225645380a85e1b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_41c58b4a19cfd9bff67650a1a85d790e = $(`<div id="html_41c58b4a19cfd9bff67650a1a85d790e" style="width: 100.0%; height: 100.0%;">Location: KOTTAYAM<br>Management: Tribal Welfare Department<br>Total: 1</div>`)[0];
+                popup_cf2224461a8cffb30225645380a85e1b.setContent(html_41c58b4a19cfd9bff67650a1a85d790e);
+            
+        
+
+        circle_marker_d7403170b847164b6a58ac9ca5bfe7d0.bindPopup(popup_cf2224461a8cffb30225645380a85e1b)
+        ;
+
+        
+    
+    
+            var circle_marker_5bf4aa0036b0a88a59abccbb2d22fb70 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_c9bac2ffca233be6f3d60f6113ea3ff8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_28da09e7acad5134da1737994a4cadc0 = $(`<div id="html_28da09e7acad5134da1737994a4cadc0" style="width: 100.0%; height: 100.0%;">Location: KOTTAYAM<br>Management: Local body<br>Total: 1</div>`)[0];
+                popup_c9bac2ffca233be6f3d60f6113ea3ff8.setContent(html_28da09e7acad5134da1737994a4cadc0);
+            
+        
+
+        circle_marker_5bf4aa0036b0a88a59abccbb2d22fb70.bindPopup(popup_c9bac2ffca233be6f3d60f6113ea3ff8)
+        ;
+
+        
+    
+    
+            var circle_marker_99cf657f3eb6c43f3154777fc9c12004 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 111.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_60006c82398e75fac085018817641a9f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_714fca57ee9840d66b8d44857475d1ae = $(`<div id="html_714fca57ee9840d66b8d44857475d1ae" style="width: 100.0%; height: 100.0%;">Location: KOTTAYAM<br>Management: Government Aided<br>Total: 555</div>`)[0];
+                popup_60006c82398e75fac085018817641a9f.setContent(html_714fca57ee9840d66b8d44857475d1ae);
+            
+        
+
+        circle_marker_99cf657f3eb6c43f3154777fc9c12004.bindPopup(popup_60006c82398e75fac085018817641a9f)
+        ;
+
+        
+    
+    
+            var circle_marker_1718d31be9cac1d96191b0c7a6eb2957 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 44.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_fb3dd0c7c6d00cf6eac874be6e4782f3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_90212c28de53a0c261d50c3b9e0bfc4f = $(`<div id="html_90212c28de53a0c261d50c3b9e0bfc4f" style="width: 100.0%; height: 100.0%;">Location: KOTTAYAM<br>Management: Private Unaided (Recognized)<br>Total: 224</div>`)[0];
+                popup_fb3dd0c7c6d00cf6eac874be6e4782f3.setContent(html_90212c28de53a0c261d50c3b9e0bfc4f);
+            
+        
+
+        circle_marker_1718d31be9cac1d96191b0c7a6eb2957.bindPopup(popup_fb3dd0c7c6d00cf6eac874be6e4782f3)
+        ;
+
+        
+    
+    
+            var circle_marker_6335dffec4f146d166b1135223b6bbe1 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_a2ae971a377fc5560e04d130c3700f7c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c117fa4ab04471a7ffe8e318d987b325 = $(`<div id="html_c117fa4ab04471a7ffe8e318d987b325" style="width: 100.0%; height: 100.0%;">Location: KOTTAYAM<br>Management: Unrecognized<br>Total: 30</div>`)[0];
+                popup_a2ae971a377fc5560e04d130c3700f7c.setContent(html_c117fa4ab04471a7ffe8e318d987b325);
+            
+        
+
+        circle_marker_6335dffec4f146d166b1135223b6bbe1.bindPopup(popup_a2ae971a377fc5560e04d130c3700f7c)
+        ;
+
+        
+    
+    
+            var circle_marker_9c0bc8b19750b06019f6991c9dc87bdc = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_37bfc4e4e1ba64f3ec8802b1f56704b3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_37d5c6c38bf44b5cc1ef63b2d2a0778c = $(`<div id="html_37d5c6c38bf44b5cc1ef63b2d2a0778c" style="width: 100.0%; height: 100.0%;">Location: KOTTAYAM<br>Management: Kendriya Vidyalaya / Central School<br>Total: 2</div>`)[0];
+                popup_37bfc4e4e1ba64f3ec8802b1f56704b3.setContent(html_37d5c6c38bf44b5cc1ef63b2d2a0778c);
+            
+        
+
+        circle_marker_9c0bc8b19750b06019f6991c9dc87bdc.bindPopup(popup_37bfc4e4e1ba64f3ec8802b1f56704b3)
+        ;
+
+        
+    
+    
+            var circle_marker_55dd8af938f15e60ef010e7aa1e03265 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_1e444f4033176d1f993b6492dee6fd8b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d4940c380e46ad0b85caaf77112d4bb2 = $(`<div id="html_d4940c380e46ad0b85caaf77112d4bb2" style="width: 100.0%; height: 100.0%;">Location: KOTTAYAM<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_1e444f4033176d1f993b6492dee6fd8b.setContent(html_d4940c380e46ad0b85caaf77112d4bb2);
+            
+        
+
+        circle_marker_55dd8af938f15e60ef010e7aa1e03265.bindPopup(popup_1e444f4033176d1f993b6492dee6fd8b)
+        ;
+
+        
+    
+    
+            var circle_marker_11b916bb29f4083d5c74c4626c9ca463 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_350110e83fbb5f82f7580d0e07034348 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cfd14cdadb8783fe5064761fc6f6ae1f = $(`<div id="html_cfd14cdadb8783fe5064761fc6f6ae1f" style="width: 100.0%; height: 100.0%;">Location: KOTTAYAM<br>Management: Madarsa recognized (by Wakf board/Madarsa Board)<br>Total: 1</div>`)[0];
+                popup_350110e83fbb5f82f7580d0e07034348.setContent(html_cfd14cdadb8783fe5064761fc6f6ae1f);
+            
+        
+
+        circle_marker_11b916bb29f4083d5c74c4626c9ca463.bindPopup(popup_350110e83fbb5f82f7580d0e07034348)
+        ;
+
+        
+    
+    
+            var circle_marker_ebde3ddc614a11084e66bab0ca049384 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 224.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_71fcb029a17656cc6bbb6af9aa32de95 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f6fba8360e7a3154c27fbad622f21116 = $(`<div id="html_f6fba8360e7a3154c27fbad622f21116" style="width: 100.0%; height: 100.0%;">Location: KOTTAYAM<br>Management: Overall<br>Total: 1123</div>`)[0];
+                popup_71fcb029a17656cc6bbb6af9aa32de95.setContent(html_f6fba8360e7a3154c27fbad622f21116);
+            
+        
+
+        circle_marker_ebde3ddc614a11084e66bab0ca049384.bindPopup(popup_71fcb029a17656cc6bbb6af9aa32de95)
+        ;
+
+        
+    
+    
+            var circle_marker_ded31cf8bb06282d9c29259e57417606 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 66.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_23ee33e408e5db289a240db85b8f0c27 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9576b4f91b400aa884ddedfd4f4bcad2 = $(`<div id="html_9576b4f91b400aa884ddedfd4f4bcad2" style="width: 100.0%; height: 100.0%;">Location: KOZHIKODE<br>Management: Department of Education<br>Total: 332</div>`)[0];
+                popup_23ee33e408e5db289a240db85b8f0c27.setContent(html_9576b4f91b400aa884ddedfd4f4bcad2);
+            
+        
+
+        circle_marker_ded31cf8bb06282d9c29259e57417606.bindPopup(popup_23ee33e408e5db289a240db85b8f0c27)
+        ;
+
+        
+    
+    
+            var circle_marker_b5cdb0b25548ed588875cdde32e97c2a = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_0e9dcbcb8fe088d93e97c9e286ff8eab = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4bba96cfc4bda3c2965b44077c3f74d6 = $(`<div id="html_4bba96cfc4bda3c2965b44077c3f74d6" style="width: 100.0%; height: 100.0%;">Location: KOZHIKODE<br>Management: Tribal Welfare Department<br>Total: 2</div>`)[0];
+                popup_0e9dcbcb8fe088d93e97c9e286ff8eab.setContent(html_4bba96cfc4bda3c2965b44077c3f74d6);
+            
+        
+
+        circle_marker_b5cdb0b25548ed588875cdde32e97c2a.bindPopup(popup_0e9dcbcb8fe088d93e97c9e286ff8eab)
+        ;
+
+        
+    
+    
+            var circle_marker_aa2f87e85202c6fbdae6309f2db017f5 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 172.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_3b5dc66d3ded7806f6e721ce3043c869 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_355f15eda1a13f06104ad1f7a82eb63f = $(`<div id="html_355f15eda1a13f06104ad1f7a82eb63f" style="width: 100.0%; height: 100.0%;">Location: KOZHIKODE<br>Management: Government Aided<br>Total: 863</div>`)[0];
+                popup_3b5dc66d3ded7806f6e721ce3043c869.setContent(html_355f15eda1a13f06104ad1f7a82eb63f);
+            
+        
+
+        circle_marker_aa2f87e85202c6fbdae6309f2db017f5.bindPopup(popup_3b5dc66d3ded7806f6e721ce3043c869)
+        ;
+
+        
+    
+    
+            var circle_marker_84d4af80b16a3f7fbc8b38a1826915a6 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 45.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_6cff440121dcd6b44106f8e68d130eba = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1002e58379cc8145693f4ae0fae3d810 = $(`<div id="html_1002e58379cc8145693f4ae0fae3d810" style="width: 100.0%; height: 100.0%;">Location: KOZHIKODE<br>Management: Private Unaided (Recognized)<br>Total: 227</div>`)[0];
+                popup_6cff440121dcd6b44106f8e68d130eba.setContent(html_1002e58379cc8145693f4ae0fae3d810);
+            
+        
+
+        circle_marker_84d4af80b16a3f7fbc8b38a1826915a6.bindPopup(popup_6cff440121dcd6b44106f8e68d130eba)
+        ;
+
+        
+    
+    
+            var circle_marker_9d3f0a4ba392a24a4c1c0b4afa5930d6 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_823ebf0e76f047b265adf6a216c8e9ed = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_edb81d9b214a0e78ee995ef79250ca85 = $(`<div id="html_edb81d9b214a0e78ee995ef79250ca85" style="width: 100.0%; height: 100.0%;">Location: KOZHIKODE<br>Management: Other Govt. managed schools<br>Total: 13</div>`)[0];
+                popup_823ebf0e76f047b265adf6a216c8e9ed.setContent(html_edb81d9b214a0e78ee995ef79250ca85);
+            
+        
+
+        circle_marker_9d3f0a4ba392a24a4c1c0b4afa5930d6.bindPopup(popup_823ebf0e76f047b265adf6a216c8e9ed)
+        ;
+
+        
+    
+    
+            var circle_marker_6a11f97306d31a07569260c80075bb1a = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_9484ad976317b57863c0317ddf943bc5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc919566bf82ed0fb3ae9409a8b55da7 = $(`<div id="html_bc919566bf82ed0fb3ae9409a8b55da7" style="width: 100.0%; height: 100.0%;">Location: KOZHIKODE<br>Management: Unrecognized<br>Total: 113</div>`)[0];
+                popup_9484ad976317b57863c0317ddf943bc5.setContent(html_bc919566bf82ed0fb3ae9409a8b55da7);
+            
+        
+
+        circle_marker_6a11f97306d31a07569260c80075bb1a.bindPopup(popup_9484ad976317b57863c0317ddf943bc5)
+        ;
+
+        
+    
+    
+            var circle_marker_78b88d092fb56765dd041df70270e447 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_564700b9045206c8e99d1b16ee88c9c7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cc35f17c63dbd2e29777d476c27d17b5 = $(`<div id="html_cc35f17c63dbd2e29777d476c27d17b5" style="width: 100.0%; height: 100.0%;">Location: KOZHIKODE<br>Management: Kendriya Vidyalaya / Central School<br>Total: 2</div>`)[0];
+                popup_564700b9045206c8e99d1b16ee88c9c7.setContent(html_cc35f17c63dbd2e29777d476c27d17b5);
+            
+        
+
+        circle_marker_78b88d092fb56765dd041df70270e447.bindPopup(popup_564700b9045206c8e99d1b16ee88c9c7)
+        ;
+
+        
+    
+    
+            var circle_marker_cd7bb89b32bf14660f69ba910cb89c6e = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_386426fc23ff0f2e95b23406e45a0813 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_734dfe4d7ef5abe41bcca23709cc684e = $(`<div id="html_734dfe4d7ef5abe41bcca23709cc684e" style="width: 100.0%; height: 100.0%;">Location: KOZHIKODE<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_386426fc23ff0f2e95b23406e45a0813.setContent(html_734dfe4d7ef5abe41bcca23709cc684e);
+            
+        
+
+        circle_marker_cd7bb89b32bf14660f69ba910cb89c6e.bindPopup(popup_386426fc23ff0f2e95b23406e45a0813)
+        ;
+
+        
+    
+    
+            var circle_marker_ae0d6021c02e5a563de4745ceb39bdd3 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 310.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_e83769639e916c3c3f84e86ee6ec7ac7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d4a13e51675c126570b5b3786c4e1d96 = $(`<div id="html_d4a13e51675c126570b5b3786c4e1d96" style="width: 100.0%; height: 100.0%;">Location: KOZHIKODE<br>Management: Overall<br>Total: 1553</div>`)[0];
+                popup_e83769639e916c3c3f84e86ee6ec7ac7.setContent(html_d4a13e51675c126570b5b3786c4e1d96);
+            
+        
+
+        circle_marker_ae0d6021c02e5a563de4745ceb39bdd3.bindPopup(popup_e83769639e916c3c3f84e86ee6ec7ac7)
+        ;
+
+        
+    
+    
+            var circle_marker_869ba60ee94cd07b2109d0d9e5b82c12 = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 111.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_6df92f5eed96965948bb049cabf8ed3b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_33023a019951f2b1d71a1b92f65afdbd = $(`<div id="html_33023a019951f2b1d71a1b92f65afdbd" style="width: 100.0%; height: 100.0%;">Location: MALAPPURAM<br>Management: Department of Education<br>Total: 555</div>`)[0];
+                popup_6df92f5eed96965948bb049cabf8ed3b.setContent(html_33023a019951f2b1d71a1b92f65afdbd);
+            
+        
+
+        circle_marker_869ba60ee94cd07b2109d0d9e5b82c12.bindPopup(popup_6df92f5eed96965948bb049cabf8ed3b)
+        ;
+
+        
+    
+    
+            var circle_marker_5f401fa9228bc29abd797cd2ea071dba = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_1742d910cc7d5e88e81c5d630c5bba5c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_78c2a5c20c16049c3cad2f52dc47836f = $(`<div id="html_78c2a5c20c16049c3cad2f52dc47836f" style="width: 100.0%; height: 100.0%;">Location: MALAPPURAM<br>Management: Tribal Welfare Department<br>Total: 1</div>`)[0];
+                popup_1742d910cc7d5e88e81c5d630c5bba5c.setContent(html_78c2a5c20c16049c3cad2f52dc47836f);
+            
+        
+
+        circle_marker_5f401fa9228bc29abd797cd2ea071dba.bindPopup(popup_1742d910cc7d5e88e81c5d630c5bba5c)
+        ;
+
+        
+    
+    
+            var circle_marker_fc34b999192211bb4c808d380b271052 = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_82107ff94c25ea73634a9ce9d9e7dd3e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c2a2ef19244b7aaca045fdb9d4feb24b = $(`<div id="html_c2a2ef19244b7aaca045fdb9d4feb24b" style="width: 100.0%; height: 100.0%;">Location: MALAPPURAM<br>Management: Local body<br>Total: 4</div>`)[0];
+                popup_82107ff94c25ea73634a9ce9d9e7dd3e.setContent(html_c2a2ef19244b7aaca045fdb9d4feb24b);
+            
+        
+
+        circle_marker_fc34b999192211bb4c808d380b271052.bindPopup(popup_82107ff94c25ea73634a9ce9d9e7dd3e)
+        ;
+
+        
+    
+    
+            var circle_marker_65b082b88e6e0e86fc0f3660bc447a84 = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 162.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_b264c38d700ef4f30eb4f0d287d35879 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6d3cabe0610af687d08e94afddd2e8c4 = $(`<div id="html_6d3cabe0610af687d08e94afddd2e8c4" style="width: 100.0%; height: 100.0%;">Location: MALAPPURAM<br>Management: Government Aided<br>Total: 810</div>`)[0];
+                popup_b264c38d700ef4f30eb4f0d287d35879.setContent(html_6d3cabe0610af687d08e94afddd2e8c4);
+            
+        
+
+        circle_marker_65b082b88e6e0e86fc0f3660bc447a84.bindPopup(popup_b264c38d700ef4f30eb4f0d287d35879)
+        ;
+
+        
+    
+    
+            var circle_marker_8be416be1e5935fd9798f7abc9f1d484 = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 79.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_d37b3a1ec7ab2e2490f786704bf85988 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bf81e4544328dd7b7d7cdd1e93dd33ed = $(`<div id="html_bf81e4544328dd7b7d7cdd1e93dd33ed" style="width: 100.0%; height: 100.0%;">Location: MALAPPURAM<br>Management: Private Unaided (Recognized)<br>Total: 397</div>`)[0];
+                popup_d37b3a1ec7ab2e2490f786704bf85988.setContent(html_bf81e4544328dd7b7d7cdd1e93dd33ed);
+            
+        
+
+        circle_marker_8be416be1e5935fd9798f7abc9f1d484.bindPopup(popup_d37b3a1ec7ab2e2490f786704bf85988)
+        ;
+
+        
+    
+    
+            var circle_marker_b3719f44e1b7784b91f1a94277f525e9 = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_7f7602146686548d2ed3a9273cf818c2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cc7a4694a464ea4b84ea7f65501a9810 = $(`<div id="html_cc7a4694a464ea4b84ea7f65501a9810" style="width: 100.0%; height: 100.0%;">Location: MALAPPURAM<br>Management: Other Govt. managed schools<br>Total: 45</div>`)[0];
+                popup_7f7602146686548d2ed3a9273cf818c2.setContent(html_cc7a4694a464ea4b84ea7f65501a9810);
+            
+        
+
+        circle_marker_b3719f44e1b7784b91f1a94277f525e9.bindPopup(popup_7f7602146686548d2ed3a9273cf818c2)
+        ;
+
+        
+    
+    
+            var circle_marker_e6f6abeb3ce280b818f43d6fb7a64c9c = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_47e581f88b3f0a9706a402c65b519b71 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f3acf23e51d48d2a6ebd1373b945a18b = $(`<div id="html_f3acf23e51d48d2a6ebd1373b945a18b" style="width: 100.0%; height: 100.0%;">Location: MALAPPURAM<br>Management: Unrecognized<br>Total: 74</div>`)[0];
+                popup_47e581f88b3f0a9706a402c65b519b71.setContent(html_f3acf23e51d48d2a6ebd1373b945a18b);
+            
+        
+
+        circle_marker_e6f6abeb3ce280b818f43d6fb7a64c9c.bindPopup(popup_47e581f88b3f0a9706a402c65b519b71)
+        ;
+
+        
+    
+    
+            var circle_marker_8022a55b52761898e73cb9764fc7c83a = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_a851a66fa2cbf0077bdbe6b936c41b2a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_163454dafa685e443b608c1e6d001669 = $(`<div id="html_163454dafa685e443b608c1e6d001669" style="width: 100.0%; height: 100.0%;">Location: MALAPPURAM<br>Management: Kendriya Vidyalaya / Central School<br>Total: 1</div>`)[0];
+                popup_a851a66fa2cbf0077bdbe6b936c41b2a.setContent(html_163454dafa685e443b608c1e6d001669);
+            
+        
+
+        circle_marker_8022a55b52761898e73cb9764fc7c83a.bindPopup(popup_a851a66fa2cbf0077bdbe6b936c41b2a)
+        ;
+
+        
+    
+    
+            var circle_marker_77df78cf24e5b48d859d4e388f2ecf19 = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_0554440a7012eb0723c1c693fe72e710 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cb5a924302ddc7cfc11f61676b6676be = $(`<div id="html_cb5a924302ddc7cfc11f61676b6676be" style="width: 100.0%; height: 100.0%;">Location: MALAPPURAM<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_0554440a7012eb0723c1c693fe72e710.setContent(html_cb5a924302ddc7cfc11f61676b6676be);
+            
+        
+
+        circle_marker_77df78cf24e5b48d859d4e388f2ecf19.bindPopup(popup_0554440a7012eb0723c1c693fe72e710)
+        ;
+
+        
+    
+    
+            var circle_marker_5e06a2b2c7e2f8b4a8eedce4dea626fa = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_88f85b0ccf0a9b6abad4375167f70181 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5dde9c51774996541eb8c52362423bad = $(`<div id="html_5dde9c51774996541eb8c52362423bad" style="width: 100.0%; height: 100.0%;">Location: MALAPPURAM<br>Management: Madarsa recognized (by Wakf board/Madarsa Board)<br>Total: 1</div>`)[0];
+                popup_88f85b0ccf0a9b6abad4375167f70181.setContent(html_5dde9c51774996541eb8c52362423bad);
+            
+        
+
+        circle_marker_5e06a2b2c7e2f8b4a8eedce4dea626fa.bindPopup(popup_88f85b0ccf0a9b6abad4375167f70181)
+        ;
+
+        
+    
+    
+            var circle_marker_a0589887b12e0bc18a6ddaf19fc90724 = L.circleMarker(
+                [9.4981, 76.3388],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 377.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_1609b0235e9a7e488d085057027e1cc8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f7d0c555106964f383b57b2d69cad570 = $(`<div id="html_f7d0c555106964f383b57b2d69cad570" style="width: 100.0%; height: 100.0%;">Location: MALAPPURAM<br>Management: Overall<br>Total: 1889</div>`)[0];
+                popup_1609b0235e9a7e488d085057027e1cc8.setContent(html_f7d0c555106964f383b57b2d69cad570);
+            
+        
+
+        circle_marker_a0589887b12e0bc18a6ddaf19fc90724.bindPopup(popup_1609b0235e9a7e488d085057027e1cc8)
+        ;
+
+        
+    
+    
+            var circle_marker_9d51ad5d59781f68572de14797832c8c = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 65.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_24ea32e38ea68ccf3fc7666b0393294e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bb8fe398ddca979e97575cd77b04a9d6 = $(`<div id="html_bb8fe398ddca979e97575cd77b04a9d6" style="width: 100.0%; height: 100.0%;">Location: PALAKKAD<br>Management: Department of Education<br>Total: 327</div>`)[0];
+                popup_24ea32e38ea68ccf3fc7666b0393294e.setContent(html_bb8fe398ddca979e97575cd77b04a9d6);
+            
+        
+
+        circle_marker_9d51ad5d59781f68572de14797832c8c.bindPopup(popup_24ea32e38ea68ccf3fc7666b0393294e)
+        ;
+
+        
+    
+    
+            var circle_marker_bb51f823fb868c06d2cef3f70d4d21bf = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_4f6ca85722f570dff4267a4004b536bc = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_48f60bf0817682a6ef97db5b37ecca22 = $(`<div id="html_48f60bf0817682a6ef97db5b37ecca22" style="width: 100.0%; height: 100.0%;">Location: PALAKKAD<br>Management: Tribal Welfare Department<br>Total: 6</div>`)[0];
+                popup_4f6ca85722f570dff4267a4004b536bc.setContent(html_48f60bf0817682a6ef97db5b37ecca22);
+            
+        
+
+        circle_marker_bb51f823fb868c06d2cef3f70d4d21bf.bindPopup(popup_4f6ca85722f570dff4267a4004b536bc)
+        ;
+
+        
+    
+    
+            var circle_marker_a84b293cf96561dc36642074da349136 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 117.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_c9e150c7141b4825c5b78e3c187dbff8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_91df12a3fba3d3f301f0996e0a7a416e = $(`<div id="html_91df12a3fba3d3f301f0996e0a7a416e" style="width: 100.0%; height: 100.0%;">Location: PALAKKAD<br>Management: Government Aided<br>Total: 585</div>`)[0];
+                popup_c9e150c7141b4825c5b78e3c187dbff8.setContent(html_91df12a3fba3d3f301f0996e0a7a416e);
+            
+        
+
+        circle_marker_a84b293cf96561dc36642074da349136.bindPopup(popup_c9e150c7141b4825c5b78e3c187dbff8)
+        ;
+
+        
+    
+    
+            var circle_marker_37aa2c141a82289746542e5b7177386e = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_b160f27aa717acb61267d99eb398dc54 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_27480188fc22f0ed96acd19615cbc168 = $(`<div id="html_27480188fc22f0ed96acd19615cbc168" style="width: 100.0%; height: 100.0%;">Location: PALAKKAD<br>Management: Private Unaided (Recognized)<br>Total: 197</div>`)[0];
+                popup_b160f27aa717acb61267d99eb398dc54.setContent(html_27480188fc22f0ed96acd19615cbc168);
+            
+        
+
+        circle_marker_37aa2c141a82289746542e5b7177386e.bindPopup(popup_b160f27aa717acb61267d99eb398dc54)
+        ;
+
+        
+    
+    
+            var circle_marker_5a539d556fcc4f60ffb075cc04661278 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_951f86414b55c73f10151023ef539da4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7d7a38fb4a83c71618ef8c2746d65a1e = $(`<div id="html_7d7a38fb4a83c71618ef8c2746d65a1e" style="width: 100.0%; height: 100.0%;">Location: PALAKKAD<br>Management: Other Govt. managed schools<br>Total: 25</div>`)[0];
+                popup_951f86414b55c73f10151023ef539da4.setContent(html_7d7a38fb4a83c71618ef8c2746d65a1e);
+            
+        
+
+        circle_marker_5a539d556fcc4f60ffb075cc04661278.bindPopup(popup_951f86414b55c73f10151023ef539da4)
+        ;
+
+        
+    
+    
+            var circle_marker_da2b25a61a89345ed7b1aabefa5cf51c = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_91f98ab311be425acb2f284d3a5bc815 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d700f2b852bc88256cb7acb2897c9d83 = $(`<div id="html_d700f2b852bc88256cb7acb2897c9d83" style="width: 100.0%; height: 100.0%;">Location: PALAKKAD<br>Management: Unrecognized<br>Total: 96</div>`)[0];
+                popup_91f98ab311be425acb2f284d3a5bc815.setContent(html_d700f2b852bc88256cb7acb2897c9d83);
+            
+        
+
+        circle_marker_da2b25a61a89345ed7b1aabefa5cf51c.bindPopup(popup_91f98ab311be425acb2f284d3a5bc815)
+        ;
+
+        
+    
+    
+            var circle_marker_974bcf4925016e9df007a634ff03c0ba = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_12b37413be60ec520587662fc36ed8d5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7f0e777d2795f47c9b89c2c3b985e587 = $(`<div id="html_7f0e777d2795f47c9b89c2c3b985e587" style="width: 100.0%; height: 100.0%;">Location: PALAKKAD<br>Management: Kendriya Vidyalaya / Central School<br>Total: 3</div>`)[0];
+                popup_12b37413be60ec520587662fc36ed8d5.setContent(html_7f0e777d2795f47c9b89c2c3b985e587);
+            
+        
+
+        circle_marker_974bcf4925016e9df007a634ff03c0ba.bindPopup(popup_12b37413be60ec520587662fc36ed8d5)
+        ;
+
+        
+    
+    
+            var circle_marker_03838f73d056270bdddebadab535b860 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_72f70481ed41ea58adc729675e8487ab = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_653fa5064e94064860d7c3a178839f8b = $(`<div id="html_653fa5064e94064860d7c3a178839f8b" style="width: 100.0%; height: 100.0%;">Location: PALAKKAD<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_72f70481ed41ea58adc729675e8487ab.setContent(html_653fa5064e94064860d7c3a178839f8b);
+            
+        
+
+        circle_marker_03838f73d056270bdddebadab535b860.bindPopup(popup_72f70481ed41ea58adc729675e8487ab)
+        ;
+
+        
+    
+    
+            var circle_marker_18b95e43b155bb0aa9029ced234b0218 = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_fcf297df5a80dfacef8e32570ca46258 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_96a498c519e74398abf31ce454637c1f = $(`<div id="html_96a498c519e74398abf31ce454637c1f" style="width: 100.0%; height: 100.0%;">Location: PALAKKAD<br>Management: Railway School<br>Total: 1</div>`)[0];
+                popup_fcf297df5a80dfacef8e32570ca46258.setContent(html_96a498c519e74398abf31ce454637c1f);
+            
+        
+
+        circle_marker_18b95e43b155bb0aa9029ced234b0218.bindPopup(popup_fcf297df5a80dfacef8e32570ca46258)
+        ;
+
+        
+    
+    
+            var circle_marker_03d3f9d91567d0707e45a364ac4f1f6f = L.circleMarker(
+                [8.8932, 76.6141],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 248.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_a34fd4a5c08a7c3acce915c7a13ef487 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4effb84455b434a9f033f5f6cb84540a = $(`<div id="html_4effb84455b434a9f033f5f6cb84540a" style="width: 100.0%; height: 100.0%;">Location: PALAKKAD<br>Management: Overall<br>Total: 1241</div>`)[0];
+                popup_a34fd4a5c08a7c3acce915c7a13ef487.setContent(html_4effb84455b434a9f033f5f6cb84540a);
+            
+        
+
+        circle_marker_03d3f9d91567d0707e45a364ac4f1f6f.bindPopup(popup_a34fd4a5c08a7c3acce915c7a13ef487)
+        ;
+
+        
+    
+    
+            var circle_marker_5880946deecf92e8d239e6c3bbd11186 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 52.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_7d4dc4d138cf8332502577dfb7364161 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d06295d7ada2fa0668677756362c58e6 = $(`<div id="html_d06295d7ada2fa0668677756362c58e6" style="width: 100.0%; height: 100.0%;">Location: PATHANAMTHITTA<br>Management: Department of Education<br>Total: 262</div>`)[0];
+                popup_7d4dc4d138cf8332502577dfb7364161.setContent(html_d06295d7ada2fa0668677756362c58e6);
+            
+        
+
+        circle_marker_5880946deecf92e8d239e6c3bbd11186.bindPopup(popup_7d4dc4d138cf8332502577dfb7364161)
+        ;
+
+        
+    
+    
+            var circle_marker_fbb98cf9609bd137f5359aa9e622885a = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_05884f38e3f87bf206fb6ca05cba31bb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2bd0406b6f427e841d0003ea9c2fcd75 = $(`<div id="html_2bd0406b6f427e841d0003ea9c2fcd75" style="width: 100.0%; height: 100.0%;">Location: PATHANAMTHITTA<br>Management: Tribal Welfare Department<br>Total: 1</div>`)[0];
+                popup_05884f38e3f87bf206fb6ca05cba31bb.setContent(html_2bd0406b6f427e841d0003ea9c2fcd75);
+            
+        
+
+        circle_marker_fbb98cf9609bd137f5359aa9e622885a.bindPopup(popup_05884f38e3f87bf206fb6ca05cba31bb)
+        ;
+
+        
+    
+    
+            var circle_marker_f763ac9d894df12dbd50e1ca1b7579a4 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 85.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_6d325ac38f6c08ddfed3f1c701606f42 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3152475654a6c4f6fc37f7276d5b603d = $(`<div id="html_3152475654a6c4f6fc37f7276d5b603d" style="width: 100.0%; height: 100.0%;">Location: PATHANAMTHITTA<br>Management: Government Aided<br>Total: 426</div>`)[0];
+                popup_6d325ac38f6c08ddfed3f1c701606f42.setContent(html_3152475654a6c4f6fc37f7276d5b603d);
+            
+        
+
+        circle_marker_f763ac9d894df12dbd50e1ca1b7579a4.bindPopup(popup_6d325ac38f6c08ddfed3f1c701606f42)
+        ;
+
+        
+    
+    
+            var circle_marker_823c4537ff11e411204bee2d5572d618 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 29.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_8585154194f5b956754bbb67cf2994e2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4bd2bc392912aa16b1b42ad78353d91c = $(`<div id="html_4bd2bc392912aa16b1b42ad78353d91c" style="width: 100.0%; height: 100.0%;">Location: PATHANAMTHITTA<br>Management: Private Unaided (Recognized)<br>Total: 145</div>`)[0];
+                popup_8585154194f5b956754bbb67cf2994e2.setContent(html_4bd2bc392912aa16b1b42ad78353d91c);
+            
+        
+
+        circle_marker_823c4537ff11e411204bee2d5572d618.bindPopup(popup_8585154194f5b956754bbb67cf2994e2)
+        ;
+
+        
+    
+    
+            var circle_marker_f2607d76a97e20e4f22fc8bf5f842fa2 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_7ef0e0e0ed88a1a633d9be86bda79867 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7a827673322e46207c5eb2a0354a7e62 = $(`<div id="html_7a827673322e46207c5eb2a0354a7e62" style="width: 100.0%; height: 100.0%;">Location: PATHANAMTHITTA<br>Management: Unrecognized<br>Total: 47</div>`)[0];
+                popup_7ef0e0e0ed88a1a633d9be86bda79867.setContent(html_7a827673322e46207c5eb2a0354a7e62);
+            
+        
+
+        circle_marker_f2607d76a97e20e4f22fc8bf5f842fa2.bindPopup(popup_7ef0e0e0ed88a1a633d9be86bda79867)
+        ;
+
+        
+    
+    
+            var circle_marker_d2c6c84969129b8be0d9f8075dbe964d = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_41876d82179826936fd53ae16bcb0872 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_defb34bd636e356a5466ec5469484a26 = $(`<div id="html_defb34bd636e356a5466ec5469484a26" style="width: 100.0%; height: 100.0%;">Location: PATHANAMTHITTA<br>Management: Kendriya Vidyalaya / Central School<br>Total: 3</div>`)[0];
+                popup_41876d82179826936fd53ae16bcb0872.setContent(html_defb34bd636e356a5466ec5469484a26);
+            
+        
+
+        circle_marker_d2c6c84969129b8be0d9f8075dbe964d.bindPopup(popup_41876d82179826936fd53ae16bcb0872)
+        ;
+
+        
+    
+    
+            var circle_marker_d8f84396cdcb674261182e53eb638fb7 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_7057b5204b0d532cb5feb004833d17fe = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_04921e2d42ed8017bf2e8c78c9b8cf9e = $(`<div id="html_04921e2d42ed8017bf2e8c78c9b8cf9e" style="width: 100.0%; height: 100.0%;">Location: PATHANAMTHITTA<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_7057b5204b0d532cb5feb004833d17fe.setContent(html_04921e2d42ed8017bf2e8c78c9b8cf9e);
+            
+        
+
+        circle_marker_d8f84396cdcb674261182e53eb638fb7.bindPopup(popup_7057b5204b0d532cb5feb004833d17fe)
+        ;
+
+        
+    
+    
+            var circle_marker_9d046fa1668e41c5150e8b965f2b1af4 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 177.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_764cc4d94db461aadc109542c6e1acfb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_87b6b00b885d568fc4bce47e686fe6cd = $(`<div id="html_87b6b00b885d568fc4bce47e686fe6cd" style="width: 100.0%; height: 100.0%;">Location: PATHANAMTHITTA<br>Management: Overall<br>Total: 885</div>`)[0];
+                popup_764cc4d94db461aadc109542c6e1acfb.setContent(html_87b6b00b885d568fc4bce47e686fe6cd);
+            
+        
+
+        circle_marker_9d046fa1668e41c5150e8b965f2b1af4.bindPopup(popup_764cc4d94db461aadc109542c6e1acfb)
+        ;
+
+        
+    
+    
+            var circle_marker_41b530ad0e853fa18d478056407b0168 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 107.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_4e9ef36b751ee9f0be75db5f19ff5550 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c9352e236ab8b0e27b0b3b449ba54ac4 = $(`<div id="html_c9352e236ab8b0e27b0b3b449ba54ac4" style="width: 100.0%; height: 100.0%;">Location: THIRUVANANTHAPURAM<br>Management: Department of Education<br>Total: 538</div>`)[0];
+                popup_4e9ef36b751ee9f0be75db5f19ff5550.setContent(html_c9352e236ab8b0e27b0b3b449ba54ac4);
+            
+        
+
+        circle_marker_41b530ad0e853fa18d478056407b0168.bindPopup(popup_4e9ef36b751ee9f0be75db5f19ff5550)
+        ;
+
+        
+    
+    
+            var circle_marker_88208627600096476dd09b91cbf5ed66 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_49f20eb9f3071892c2d4f69fa0af5419 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d2c478c67e6e458c40109d4a084285e7 = $(`<div id="html_d2c478c67e6e458c40109d4a084285e7" style="width: 100.0%; height: 100.0%;">Location: THIRUVANANTHAPURAM<br>Management: Tribal Welfare Department<br>Total: 1</div>`)[0];
+                popup_49f20eb9f3071892c2d4f69fa0af5419.setContent(html_d2c478c67e6e458c40109d4a084285e7);
+            
+        
+
+        circle_marker_88208627600096476dd09b91cbf5ed66.bindPopup(popup_49f20eb9f3071892c2d4f69fa0af5419)
+        ;
+
+        
+    
+    
+            var circle_marker_5c6db425c2098cf73295afd3078f8ce8 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_8cba7d3032ff3f658b8e65216df0e3c5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3881349008b8251b4af75fb82c416229 = $(`<div id="html_3881349008b8251b4af75fb82c416229" style="width: 100.0%; height: 100.0%;">Location: THIRUVANANTHAPURAM<br>Management: Local body<br>Total: 4</div>`)[0];
+                popup_8cba7d3032ff3f658b8e65216df0e3c5.setContent(html_3881349008b8251b4af75fb82c416229);
+            
+        
+
+        circle_marker_5c6db425c2098cf73295afd3078f8ce8.bindPopup(popup_8cba7d3032ff3f658b8e65216df0e3c5)
+        ;
+
+        
+    
+    
+            var circle_marker_4731e48370923de7b29060c56daafde5 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 72.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_908746dc6705bd591ac1e933165376f6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ae4a49dcdf95b2225f8e525878ee7e9f = $(`<div id="html_ae4a49dcdf95b2225f8e525878ee7e9f" style="width: 100.0%; height: 100.0%;">Location: THIRUVANANTHAPURAM<br>Management: Government Aided<br>Total: 363</div>`)[0];
+                popup_908746dc6705bd591ac1e933165376f6.setContent(html_ae4a49dcdf95b2225f8e525878ee7e9f);
+            
+        
+
+        circle_marker_4731e48370923de7b29060c56daafde5.bindPopup(popup_908746dc6705bd591ac1e933165376f6)
+        ;
+
+        
+    
+    
+            var circle_marker_b7ef746b6ff4f5636e0733082153249e = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 60.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_94117e834dbebf6ce01dcdb7947baacd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_639853521da26e1e775655f8cba8ca21 = $(`<div id="html_639853521da26e1e775655f8cba8ca21" style="width: 100.0%; height: 100.0%;">Location: THIRUVANANTHAPURAM<br>Management: Private Unaided (Recognized)<br>Total: 301</div>`)[0];
+                popup_94117e834dbebf6ce01dcdb7947baacd.setContent(html_639853521da26e1e775655f8cba8ca21);
+            
+        
+
+        circle_marker_b7ef746b6ff4f5636e0733082153249e.bindPopup(popup_94117e834dbebf6ce01dcdb7947baacd)
+        ;
+
+        
+    
+    
+            var circle_marker_2883c0ae137a0f289021c77c84b2f7ce = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_bcd111739a3f506271cb67cfec870d16 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b18256d77e75341df06ec44397095a23 = $(`<div id="html_b18256d77e75341df06ec44397095a23" style="width: 100.0%; height: 100.0%;">Location: THIRUVANANTHAPURAM<br>Management: Other Govt. managed schools<br>Total: 13</div>`)[0];
+                popup_bcd111739a3f506271cb67cfec870d16.setContent(html_b18256d77e75341df06ec44397095a23);
+            
+        
+
+        circle_marker_2883c0ae137a0f289021c77c84b2f7ce.bindPopup(popup_bcd111739a3f506271cb67cfec870d16)
+        ;
+
+        
+    
+    
+            var circle_marker_86467313c7ed0a9be44f33e0dbd029c2 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_5322268292a93805631e0b57b0f061d7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e95c914c65ee8091c72e683bc4f51089 = $(`<div id="html_e95c914c65ee8091c72e683bc4f51089" style="width: 100.0%; height: 100.0%;">Location: THIRUVANANTHAPURAM<br>Management: Unrecognized<br>Total: 130</div>`)[0];
+                popup_5322268292a93805631e0b57b0f061d7.setContent(html_e95c914c65ee8091c72e683bc4f51089);
+            
+        
+
+        circle_marker_86467313c7ed0a9be44f33e0dbd029c2.bindPopup(popup_5322268292a93805631e0b57b0f061d7)
+        ;
+
+        
+    
+    
+            var circle_marker_493137fc1f11257ccbfd9aeec9a0b761 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_93d984f0b60352ae21096439d9565d44 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1fe709c7ea0783a8b2bda9e1386c6036 = $(`<div id="html_1fe709c7ea0783a8b2bda9e1386c6036" style="width: 100.0%; height: 100.0%;">Location: THIRUVANANTHAPURAM<br>Management: Kendriya Vidyalaya / Central School<br>Total: 6</div>`)[0];
+                popup_93d984f0b60352ae21096439d9565d44.setContent(html_1fe709c7ea0783a8b2bda9e1386c6036);
+            
+        
+
+        circle_marker_493137fc1f11257ccbfd9aeec9a0b761.bindPopup(popup_93d984f0b60352ae21096439d9565d44)
+        ;
+
+        
+    
+    
+            var circle_marker_204483b41376d09ef48b13ffb6223f86 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_d222485eda3b1ea331c28f420628f2d8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e73c990cf02499d8941f91a22521fb72 = $(`<div id="html_e73c990cf02499d8941f91a22521fb72" style="width: 100.0%; height: 100.0%;">Location: THIRUVANANTHAPURAM<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_d222485eda3b1ea331c28f420628f2d8.setContent(html_e73c990cf02499d8941f91a22521fb72);
+            
+        
+
+        circle_marker_204483b41376d09ef48b13ffb6223f86.bindPopup(popup_d222485eda3b1ea331c28f420628f2d8)
+        ;
+
+        
+    
+    
+            var circle_marker_bb9d4f1bc080106880b690afe34181fe = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_ec558383bc7d9f28db9f500aec6f4b30 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9a0deeb587d83b49d3ac50403f58d37a = $(`<div id="html_9a0deeb587d83b49d3ac50403f58d37a" style="width: 100.0%; height: 100.0%;">Location: THIRUVANANTHAPURAM<br>Management: Sainik School<br>Total: 1</div>`)[0];
+                popup_ec558383bc7d9f28db9f500aec6f4b30.setContent(html_9a0deeb587d83b49d3ac50403f58d37a);
+            
+        
+
+        circle_marker_bb9d4f1bc080106880b690afe34181fe.bindPopup(popup_ec558383bc7d9f28db9f500aec6f4b30)
+        ;
+
+        
+    
+    
+            var circle_marker_85415fda23c73fa6cd41ce2e7c7aa141 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 271.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_0477ab0cf55a1b48cec8d5e376b41002 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8664e0d38e85ebbf3c4b815d0645b0f6 = $(`<div id="html_8664e0d38e85ebbf3c4b815d0645b0f6" style="width: 100.0%; height: 100.0%;">Location: THIRUVANANTHAPURAM<br>Management: Overall<br>Total: 1358</div>`)[0];
+                popup_0477ab0cf55a1b48cec8d5e376b41002.setContent(html_8664e0d38e85ebbf3c4b815d0645b0f6);
+            
+        
+
+        circle_marker_85415fda23c73fa6cd41ce2e7c7aa141.bindPopup(popup_0477ab0cf55a1b48cec8d5e376b41002)
+        ;
+
+        
+    
+    
+            var circle_marker_94f8fd5bcb1c1593ed6c2cbbe23c1e89 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 52.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_14b6d945d30a7de45908a9adbb489e26 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_08df40ae3acddae9a4562e68f8b8cf7d = $(`<div id="html_08df40ae3acddae9a4562e68f8b8cf7d" style="width: 100.0%; height: 100.0%;">Location: THRISSUR<br>Management: Department of Education<br>Total: 263</div>`)[0];
+                popup_14b6d945d30a7de45908a9adbb489e26.setContent(html_08df40ae3acddae9a4562e68f8b8cf7d);
+            
+        
+
+        circle_marker_94f8fd5bcb1c1593ed6c2cbbe23c1e89.bindPopup(popup_14b6d945d30a7de45908a9adbb489e26)
+        ;
+
+        
+    
+    
+            var circle_marker_0d1979a2d4d7ad9e1bba89b3265a4a66 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_5d6666bc2012e8dca4a52dd3d6bdd592 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cd5ac3df56807e0925d521bce1eff8cc = $(`<div id="html_cd5ac3df56807e0925d521bce1eff8cc" style="width: 100.0%; height: 100.0%;">Location: THRISSUR<br>Management: Tribal Welfare Department<br>Total: 3</div>`)[0];
+                popup_5d6666bc2012e8dca4a52dd3d6bdd592.setContent(html_cd5ac3df56807e0925d521bce1eff8cc);
+            
+        
+
+        circle_marker_0d1979a2d4d7ad9e1bba89b3265a4a66.bindPopup(popup_5d6666bc2012e8dca4a52dd3d6bdd592)
+        ;
+
+        
+    
+    
+            var circle_marker_5894777f71a692f7858062f4cc10be5e = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_bb693eef208e34effd0a35e0a9e81fae = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_23134327007d2cf2fee25e1cb9928074 = $(`<div id="html_23134327007d2cf2fee25e1cb9928074" style="width: 100.0%; height: 100.0%;">Location: THRISSUR<br>Management: Local body<br>Total: 2</div>`)[0];
+                popup_bb693eef208e34effd0a35e0a9e81fae.setContent(html_23134327007d2cf2fee25e1cb9928074);
+            
+        
+
+        circle_marker_5894777f71a692f7858062f4cc10be5e.bindPopup(popup_bb693eef208e34effd0a35e0a9e81fae)
+        ;
+
+        
+    
+    
+            var circle_marker_28855e725fa765a60115678cd12b501f = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 134.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_b259d5f040fd4109c569f060772ada79 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_726a89bf9258a9c6516cfb257bfc5cef = $(`<div id="html_726a89bf9258a9c6516cfb257bfc5cef" style="width: 100.0%; height: 100.0%;">Location: THRISSUR<br>Management: Government Aided<br>Total: 674</div>`)[0];
+                popup_b259d5f040fd4109c569f060772ada79.setContent(html_726a89bf9258a9c6516cfb257bfc5cef);
+            
+        
+
+        circle_marker_28855e725fa765a60115678cd12b501f.bindPopup(popup_b259d5f040fd4109c569f060772ada79)
+        ;
+
+        
+    
+    
+            var circle_marker_09c1b32f576412157efa7c168b6f0b33 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 54.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_e1beadf0f37c90ef7888c2f4f9051de5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a534f0e29bad07832cd500dd3e9a058e = $(`<div id="html_a534f0e29bad07832cd500dd3e9a058e" style="width: 100.0%; height: 100.0%;">Location: THRISSUR<br>Management: Private Unaided (Recognized)<br>Total: 274</div>`)[0];
+                popup_e1beadf0f37c90ef7888c2f4f9051de5.setContent(html_a534f0e29bad07832cd500dd3e9a058e);
+            
+        
+
+        circle_marker_09c1b32f576412157efa7c168b6f0b33.bindPopup(popup_e1beadf0f37c90ef7888c2f4f9051de5)
+        ;
+
+        
+    
+    
+            var circle_marker_7f7b654da5fde12cb4a158b67bc8a677 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_4ce5e1405b68e32f8897e77ea7811644 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_40bf9bb91d3cacb5ea8f750bb0166f33 = $(`<div id="html_40bf9bb91d3cacb5ea8f750bb0166f33" style="width: 100.0%; height: 100.0%;">Location: THRISSUR<br>Management: Other Govt. managed schools<br>Total: 1</div>`)[0];
+                popup_4ce5e1405b68e32f8897e77ea7811644.setContent(html_40bf9bb91d3cacb5ea8f750bb0166f33);
+            
+        
+
+        circle_marker_7f7b654da5fde12cb4a158b67bc8a677.bindPopup(popup_4ce5e1405b68e32f8897e77ea7811644)
+        ;
+
+        
+    
+    
+            var circle_marker_3322e77d72e5ce46ecc5f4e8b1162036 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_676ddb4f08500ffa7eeed2df12faf8a6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_51923e3082e2e2611df9aebc6cbd576d = $(`<div id="html_51923e3082e2e2611df9aebc6cbd576d" style="width: 100.0%; height: 100.0%;">Location: THRISSUR<br>Management: Unrecognized<br>Total: 28</div>`)[0];
+                popup_676ddb4f08500ffa7eeed2df12faf8a6.setContent(html_51923e3082e2e2611df9aebc6cbd576d);
+            
+        
+
+        circle_marker_3322e77d72e5ce46ecc5f4e8b1162036.bindPopup(popup_676ddb4f08500ffa7eeed2df12faf8a6)
+        ;
+
+        
+    
+    
+            var circle_marker_2284d855401737ea0d3c438c11835b41 = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.4, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_65869211d385aec85ac92f702f29a93a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8fa9c75b63057053e1e5dce9345db5d8 = $(`<div id="html_8fa9c75b63057053e1e5dce9345db5d8" style="width: 100.0%; height: 100.0%;">Location: THRISSUR<br>Management: Kendriya Vidyalaya / Central School<br>Total: 2</div>`)[0];
+                popup_65869211d385aec85ac92f702f29a93a.setContent(html_8fa9c75b63057053e1e5dce9345db5d8);
+            
+        
+
+        circle_marker_2284d855401737ea0d3c438c11835b41.bindPopup(popup_65869211d385aec85ac92f702f29a93a)
+        ;
+
+        
+    
+    
+            var circle_marker_ad33e3601018c54d09e8e31c0add3a1d = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_88fd82e1872725223fbbe1b8e33d1ed8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5b1d29a5c3004ceaea7153201f475201 = $(`<div id="html_5b1d29a5c3004ceaea7153201f475201" style="width: 100.0%; height: 100.0%;">Location: THRISSUR<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_88fd82e1872725223fbbe1b8e33d1ed8.setContent(html_5b1d29a5c3004ceaea7153201f475201);
+            
+        
+
+        circle_marker_ad33e3601018c54d09e8e31c0add3a1d.bindPopup(popup_88fd82e1872725223fbbe1b8e33d1ed8)
+        ;
+
+        
+    
+    
+            var circle_marker_8bcdcf428871e21d3946894af7f7339e = L.circleMarker(
+                [9.9312, 77.2951],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 249.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_1e48f038b89dbe2a31020e8114da88d2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f73e1a256aca8f009b71b747c22f629e = $(`<div id="html_f73e1a256aca8f009b71b747c22f629e" style="width: 100.0%; height: 100.0%;">Location: THRISSUR<br>Management: Overall<br>Total: 1248</div>`)[0];
+                popup_1e48f038b89dbe2a31020e8114da88d2.setContent(html_f73e1a256aca8f009b71b747c22f629e);
+            
+        
+
+        circle_marker_8bcdcf428871e21d3946894af7f7339e.bindPopup(popup_1e48f038b89dbe2a31020e8114da88d2)
+        ;
+
+        
+    
+    
+            var circle_marker_08a614736bb71aa70e49689aa786ab22 = L.circleMarker(
+                [11.685, 76.1302],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_3eaf16e91987d64f10c519aee0d7a705 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_790da169b2db71ea35d8f3d3a0c6381a = $(`<div id="html_790da169b2db71ea35d8f3d3a0c6381a" style="width: 100.0%; height: 100.0%;">Location: WAYANAD<br>Management: Department of Education<br>Total: 168</div>`)[0];
+                popup_3eaf16e91987d64f10c519aee0d7a705.setContent(html_790da169b2db71ea35d8f3d3a0c6381a);
+            
+        
+
+        circle_marker_08a614736bb71aa70e49689aa786ab22.bindPopup(popup_3eaf16e91987d64f10c519aee0d7a705)
+        ;
+
+        
+    
+    
+            var circle_marker_86cdef660d80bec13a9573bb2fa2cbac = L.circleMarker(
+                [11.685, 76.1302],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 1.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_c52bdbdd2d24df1d32a51e6a37c782a5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e8114aed86ba4109c58a220b1b904327 = $(`<div id="html_e8114aed86ba4109c58a220b1b904327" style="width: 100.0%; height: 100.0%;">Location: WAYANAD<br>Management: Tribal Welfare Department<br>Total: 5</div>`)[0];
+                popup_c52bdbdd2d24df1d32a51e6a37c782a5.setContent(html_e8114aed86ba4109c58a220b1b904327);
+            
+        
+
+        circle_marker_86cdef660d80bec13a9573bb2fa2cbac.bindPopup(popup_c52bdbdd2d24df1d32a51e6a37c782a5)
+        ;
+
+        
+    
+    
+            var circle_marker_c448b29135d34c1e7098274713a49514 = L.circleMarker(
+                [11.685, 76.1302],
+                {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "purple", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_b62767291261f621c506505f4e3c649b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a8eb2327206bf210fdf0cbb847bfd7ac = $(`<div id="html_a8eb2327206bf210fdf0cbb847bfd7ac" style="width: 100.0%; height: 100.0%;">Location: WAYANAD<br>Management: Government Aided<br>Total: 113</div>`)[0];
+                popup_b62767291261f621c506505f4e3c649b.setContent(html_a8eb2327206bf210fdf0cbb847bfd7ac);
+            
+        
+
+        circle_marker_c448b29135d34c1e7098274713a49514.bindPopup(popup_b62767291261f621c506505f4e3c649b)
+        ;
+
+        
+    
+    
+            var circle_marker_efe1d107556b8e07dec39d3d50d03497 = L.circleMarker(
+                [11.685, 76.1302],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 13.8, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_82018ddad5b290cd34e51a35099e2f61 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c814ac7eca07b2609e92870b7d9fe826 = $(`<div id="html_c814ac7eca07b2609e92870b7d9fe826" style="width: 100.0%; height: 100.0%;">Location: WAYANAD<br>Management: Private Unaided (Recognized)<br>Total: 69</div>`)[0];
+                popup_82018ddad5b290cd34e51a35099e2f61.setContent(html_c814ac7eca07b2609e92870b7d9fe826);
+            
+        
+
+        circle_marker_efe1d107556b8e07dec39d3d50d03497.bindPopup(popup_82018ddad5b290cd34e51a35099e2f61)
+        ;
+
+        
+    
+    
+            var circle_marker_d722ca4a802706115f8ebe7daa31bba0 = L.circleMarker(
+                [11.685, 76.1302],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_05e5b1a32146bf9b27df65521e935b05 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_edea4490b475db9ff44af3ff5897a91f = $(`<div id="html_edea4490b475db9ff44af3ff5897a91f" style="width: 100.0%; height: 100.0%;">Location: WAYANAD<br>Management: Other Govt. managed schools<br>Total: 35</div>`)[0];
+                popup_05e5b1a32146bf9b27df65521e935b05.setContent(html_edea4490b475db9ff44af3ff5897a91f);
+            
+        
+
+        circle_marker_d722ca4a802706115f8ebe7daa31bba0.bindPopup(popup_05e5b1a32146bf9b27df65521e935b05)
+        ;
+
+        
+    
+    
+            var circle_marker_eed4b70c33c822d3158e67977bec04b5 = L.circleMarker(
+                [11.685, 76.1302],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2.6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_66a54e756d682b04fc83629e20b8ea88 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_22ccbae842bcb24a948ea9811d74e708 = $(`<div id="html_22ccbae842bcb24a948ea9811d74e708" style="width: 100.0%; height: 100.0%;">Location: WAYANAD<br>Management: Unrecognized<br>Total: 13</div>`)[0];
+                popup_66a54e756d682b04fc83629e20b8ea88.setContent(html_22ccbae842bcb24a948ea9811d74e708);
+            
+        
+
+        circle_marker_eed4b70c33c822d3158e67977bec04b5.bindPopup(popup_66a54e756d682b04fc83629e20b8ea88)
+        ;
+
+        
+    
+    
+            var circle_marker_393506352685fb387b3f08f3cb20f7d5 = L.circleMarker(
+                [11.685, 76.1302],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_95005eeb09565d88daf3c4a806623553 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_30de68d9b453c1242df40bd9ac70fbb2 = $(`<div id="html_30de68d9b453c1242df40bd9ac70fbb2" style="width: 100.0%; height: 100.0%;">Location: WAYANAD<br>Management: Kendriya Vidyalaya / Central School<br>Total: 1</div>`)[0];
+                popup_95005eeb09565d88daf3c4a806623553.setContent(html_30de68d9b453c1242df40bd9ac70fbb2);
+            
+        
+
+        circle_marker_393506352685fb387b3f08f3cb20f7d5.bindPopup(popup_95005eeb09565d88daf3c4a806623553)
+        ;
+
+        
+    
+    
+            var circle_marker_dbdf837a64b7d9e7f992d7dab12d55ad = L.circleMarker(
+                [11.685, 76.1302],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 0.2, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_2cad263934cf79b8b2b53799c48311f9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0595ea95cf1b6588d7350c5e2aebac7a = $(`<div id="html_0595ea95cf1b6588d7350c5e2aebac7a" style="width: 100.0%; height: 100.0%;">Location: WAYANAD<br>Management: Jawahar Navodaya Vidyalaya<br>Total: 1</div>`)[0];
+                popup_2cad263934cf79b8b2b53799c48311f9.setContent(html_0595ea95cf1b6588d7350c5e2aebac7a);
+            
+        
+
+        circle_marker_dbdf837a64b7d9e7f992d7dab12d55ad.bindPopup(popup_2cad263934cf79b8b2b53799c48311f9)
+        ;
+
+        
+    
+    
+            var circle_marker_427e91c60392c4e562f7d98307b7ba1a = L.circleMarker(
+                [11.685, 76.1302],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 81.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_a4cbe238a80ff34f4a1ddef760c5e6ca = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_56c2a43a487e710a384fe9d57e150324 = $(`<div id="html_56c2a43a487e710a384fe9d57e150324" style="width: 100.0%; height: 100.0%;">Location: WAYANAD<br>Management: Overall<br>Total: 405</div>`)[0];
+                popup_a4cbe238a80ff34f4a1ddef760c5e6ca.setContent(html_56c2a43a487e710a384fe9d57e150324);
+            
+        
+
+        circle_marker_427e91c60392c4e562f7d98307b7ba1a.bindPopup(popup_a4cbe238a80ff34f4a1ddef760c5e6ca)
+        ;
+
+        
+    
+    
+            var circle_marker_9c6be4d8f33873d480328e15d255c6d7 = L.circleMarker(
+                [9.5916, 76.523],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "gray", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3248.0, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_f043b0f56dec3cada97fa738c3fc76c8);
+        
+    
+        var popup_fbcbc9dd09a09409fa521c97f1a9c9cd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3dbc8fbb81a53854ee244646316ef511 = $(`<div id="html_3dbc8fbb81a53854ee244646316ef511" style="width: 100.0%; height: 100.0%;">Location: Total<br>Management: Overall<br>Total: 16240</div>`)[0];
+                popup_fbcbc9dd09a09409fa521c97f1a9c9cd.setContent(html_3dbc8fbb81a53854ee244646316ef511);
+            
+        
+
+        circle_marker_9c6be4d8f33873d480328e15d255c6d7.bindPopup(popup_fbcbc9dd09a09409fa521c97f1a9c9cd)
+        ;
+
+        
+    
+</script>
+</html>
